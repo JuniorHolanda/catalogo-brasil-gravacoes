@@ -48,15 +48,21 @@ input {
   justify-content: center;
   align-items: center;
   padding: 0 30px;
+  border: solid red;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .header-catalog .header-catalog__menu .header-catalog__container-logo .header-catalog__logo-img {
   width: 100%;
   max-width: 200px;
+  min-width: 150px;
 }
 .header-catalog .header-catalog__menu .header-catalog__nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: solid paleturquoise;
+  width: 100%;
 }
 .header-catalog .header-catalog__menu .header-catalog__nav .header-catalog__list {
   display: flex;
@@ -73,6 +79,7 @@ input {
   justify-content: end;
   padding: 0 30px;
   align-items: center;
+  border: solid yellow;
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container .header-catalog__whatsapp-icon {
   font-size: 2em;
