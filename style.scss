@@ -1,0 +1,18 @@
+//fonts
+@import url("https://use.typekit.net/oqh1shf.css");
+
+//utilities
+@import'assets/style/mixin';
+@import'assets/style/variable';
+
+//pages
+@import'assets/style/reset';
+@import'assets/style/header-catalog';
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+}

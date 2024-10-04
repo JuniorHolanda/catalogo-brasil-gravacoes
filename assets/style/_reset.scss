@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+ul,
+li,
+ol {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
