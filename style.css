@@ -34,6 +34,7 @@ input {
 .header-catalog {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
   width: 100%;
   background-color: #ffffff;
@@ -41,45 +42,53 @@ input {
 .header-catalog .header-catalog__menu {
   display: grid;
   grid-template: 1fr/15% 70% 1fr;
+  width: 90%;
+  gap: 10px;
   padding: 30px;
+  border-bottom: solid #f3f3f3 1px;
 }
 .header-catalog .header-catalog__menu .header-catalog__container-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
-  border: solid red;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .header-catalog .header-catalog__menu .header-catalog__container-logo .header-catalog__logo-img {
   width: 100%;
   max-width: 200px;
-  min-width: 150px;
 }
 .header-catalog .header-catalog__menu .header-catalog__nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid paleturquoise;
-  width: 100%;
 }
 .header-catalog .header-catalog__menu .header-catalog__nav .header-catalog__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 10px;
   width: 100%;
 }
 .header-catalog .header-catalog__menu .header-catalog__nav .header-catalog__list .header-catalog__item {
+  text-align: center;
   background-color: #eeeeee;
   padding: 10px 20px;
   border-radius: 10px;
+  font-family: "mono45-headline", monospace;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container {
   display: flex;
   justify-content: end;
-  padding: 0 30px;
+  gap: 10px;
   align-items: center;
-  border: solid yellow;
+}
+.header-catalog .header-catalog__menu .header-catalog__whatsapp-container .header-catalog__fale-conosco {
+  font-family: "mono45-headline", monospace;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container .header-catalog__whatsapp-icon {
   font-size: 2em;
@@ -91,12 +100,31 @@ input {
 .header-catalog .header-catalog__title-container .header-catalog__title {
   width: 100%;
   font-family: "mono45-headline", monospace;
-  font-size: 9em;
+  font-size: clamp(1rem, 10vw, 9rem);
   letter-spacing: 40px;
   font-weight: 600;
   text-align: center;
 }
 
+/*====================================TABLET=======================================*/
+@media (min-width: 400px) and (max-width: 990px) {
+  .header-catalog .header-catalog__menu {
+    grid-template: 1fr 1fr 1fr/1fr;
+  }
+  .header-catalog .header-catalog__menu .header-catalog__nav .header-catalog__list .header-catalog__item {
+    flex-grow: 1;
+  }
+  .header-catalog .header-catalog__menu .header-catalog__whatsapp-container {
+    justify-content: center;
+    padding: 0 30px;
+  }
+  .header-catalog .header-catalog__title-container .header-catalog__title {
+    font-family: "mono45-headline", monospace;
+    font-size: clamp(1rem, 10vw, 9rem);
+    letter-spacing: 20px;
+    font-weight: 600;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
