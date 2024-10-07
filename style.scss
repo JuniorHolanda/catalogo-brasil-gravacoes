@@ -8,6 +8,7 @@
 //pages
 @import'assets/style/reset';
 @import'assets/style/header-catalog';
+@import'assets/style/services';
 
 
 body {
@@ -15,4 +16,15 @@ body {
     flex-direction: column;
     width: 100%;
     background-color: rgb(241, 241, 241);
+
+    .content{
+        display: flex;
+
+        .silk-tampo-peq{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 30px;
+        }
+    }
 }

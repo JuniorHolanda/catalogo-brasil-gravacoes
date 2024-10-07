@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
     <title>Catalogo Brasil Gravações</title>
 </head>
 <body>
@@ -34,6 +35,64 @@
         </div>
     </header>
 
+    <main class="content">
+        <section class="silk-tampo-peq">
+            <div class="description">
+                <h2 class="description__title">SILK/TAMPOGRAFIA</h2>
+                <h3 class="description__sub-title">PEÇAS PEQUENAS</h3>
+                <p class="description__text">Preços para produtos pequenos tais como chaveiros, fones,  porta-joias, carregadores entre outros.</p>
+            </div>
 
+            <div class="carousel">
+                <div class="carousel__content">
+                    <img class="carousel__img" src="assets/img/tampografia/itens-pequenos/01.jpg" alt="">
+                    <img class="carousel__img" src="assets/img/tampografia/itens-pequenos/02.jpg" alt="">
+                    <img class="carousel__img" src="assets/img/tampografia/itens-pequenos/03.jpg" alt="">
+                    <img class="carousel__img" src="assets/img/tampografia/itens-pequenos/04.jpg" alt="">
+                    <img class="carousel__img" src="assets/img/tampografia/itens-pequenos/01.jpg" alt="">
+                    <img class="carousel__img" src="assets/img/tampografia/itens-pequenos/05.jpg" alt="">
+                    <img class="carousel__img" src="assets/img/tampografia/itens-pequenos/03.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="controller">
+                <div class="controller__container-btn">
+                    <label class="controller__label controller__label-cores" for="btnCores">Quantidade de cores</label>
+                    <div class="controller__container-cores">
+                        <i class="controller__arrows controller__arow-up fa-solid fa-angle-up"></i>
+                        <input class="controller__btn" type="number" name="cores" id="btnCores" min="1" max="5" value="1" readonly>
+                        <i class="controller__arrows controller__arow-down fa-solid fa-angle-down"></i>
+                    </div>
+                    
+                    <label class="controller__label controller__label-gravacao" for="btnGravacao">Quantidade de gravações</label>
+                    <div class="controller__container-gravacao">
+                        <i class="controller__arrows controller__arow-up fa-solid fa-angle-up"></i>
+                        <input class="controller__btn" type="number" name="gravacoes" id="btnGravacao" min="1" max="5" value="1" readonly>
+                        <i class="controller__arrows controller__arow-down fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+                
+                <div class="contoller__info">
+                    <h2 class="controller__title">Orçamento</h2>
+                    <p class="controller__text">1 Cor | 1 Gravação</p>
+                </div>
+
+                <ul class="controller__container-price">
+                    <li class="controller__price-value"><strong class="controller__price-strong">1-50</strong> R$ 150,00</li>
+                    <li class="controller__price-value"><strong class="controller__price-strong">1-50</strong> R$ 150,00</li>
+                    <li class="controller__price-value"><strong class="controller__price-strong">1-50</strong> R$ 150,00</li>
+                    <li class="controller__price-value"><strong class="controller__price-strong">1-50</strong> R$ 150,00</li>
+                    <li class="controller__price-value"><strong class="controller__price-strong">1-50</strong> R$ 150,00</li>
+                    <li class="controller__price-value"><strong class="controller__price-strong">1-50</strong> R$ 150,00</li>
+                    <li class="controller__price-value"><strong class="controller__price-strong">1-50</strong> R$ 150,00</li>
+                    <li class="controller__price-value"><strong class="controller__price-strong">1-50</strong> R$ 150,00</li>
+                </ul>
+
+                <a href="#" class="controller__action">Fale conosco</a>
+            </div>
+
+            
+        </section>
+    </main>
 </body>
 </html>
