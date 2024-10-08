@@ -110,9 +110,12 @@
 
             .controller__btn{
                 display: flex;
+                flex-direction: column;
+                justify-content: center;
+
                 width: 100%;
                 color: #1696ff;
-                text-align: center;
+
                 @include font($secundary-font, clamp(1em, 6vw, 7em), 0px, 600);
 
                 

@@ -59,16 +59,16 @@
                 <div class="controller__container-btn">
                     <label class="controller__label controller__label-cores" for="btnCores">Quantidade de cores</label>
                     <div class="controller__container-cores">
-                        <i class="controller__arrows controller__arow-up fa-solid fa-angle-up"></i>
-                        <input class="controller__btn" type="number" name="cores" id="btnCores" min="1" max="5" value="1" readonly>
-                        <i class="controller__arrows controller__arow-down fa-solid fa-angle-down"></i>
+                        <i class="controller__arrows controller__arow-up fa-solid fa-angle-up" data-arrow="increment" data-type="color"></i>
+                        <h2 class="controller__btn" id="btnCores">1</h2>
+                        <i class="controller__arrows controller__arow-down fa-solid fa-angle-down" data-arrow="decrement" data-type="color"></i>
                     </div>
                     
                     <label class="controller__label controller__label-gravacao" for="btnGravacao">Quantidade de gravações</label>
                     <div class="controller__container-gravacao">
-                        <i class="controller__arrows controller__arow-up fa-solid fa-angle-up"></i>
-                        <input class="controller__btn" type="number" name="gravacoes" id="btnGravacao" min="1" max="5" value="1" readonly>
-                        <i class="controller__arrows controller__arow-down fa-solid fa-angle-down"></i>
+                        <i class="controller__arrows controller__arow-up fa-solid fa-angle-up" data-arrow="increment" data-type="amount"></i>
+                        <h2 class="controller__btn" id="btnGravacao">1</h2>
+                        <i class="controller__arrows controller__arow-down fa-solid fa-angle-down" data-arrow="decrement" data-type="amount"></i>
                     </div>
                 </div>
                 

@@ -232,9 +232,10 @@ input {
 }
 .controller .controller__container-btn .controller__container-cores .controller__btn, .controller .controller__container-btn .controller__container-gravacao .controller__btn {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   color: #1696ff;
-  text-align: center;
   font-family: "museo", serif;
   font-size: clamp(1em, 6vw, 7em);
   letter-spacing: 0px;
