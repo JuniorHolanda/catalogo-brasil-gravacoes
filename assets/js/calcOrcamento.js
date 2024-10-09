@@ -1,24 +1,19 @@
-const listArrowsCalc = document.querySelectorAll('.controller__arrows');
-
-
-const btnAmount = document.querySelector('#btnGravacao');
-const btnColor = document.querySelector('#btnCores');
+const listArrowsCalc = document.querySelectorAll('.controller__arrows'); // referencia as setas
 
 //arrow identifica se a seta incrementa ou decrementa nas extruturas condicionais
 //identifica o tipo do botão, se é de quntidade ou de cores
 //identifica o valor de botão com o número 
 function operationNumber(arrow, valueBtn) {
-    
     if (arrow === 'increment') { 
-        valueBtn = (valueBtn < 5) ? valueBtn + 1 : 1; // Volta para 1 se for maior que 5
+        valueBtn = (valueBtn < 5) ? valueBtn + 1 : 1; // volta para 1 se for maior que 5
     } else if (arrow === 'decrement') {
-        valueBtn = (valueBtn > 1) ? valueBtn - 1 : 5; // Volta para 5 se for menor que 1
+        valueBtn = (valueBtn > 1) ? valueBtn - 1 : 5; // avança para 5 se for menor que 1
     }
     return valueBtn // retorna novo valor
 }
 // RENDERIZA O VALOR DE COLOR E AMOUNT
 function renderNumbers(arrow, type) {
-    let typeBtn = document.querySelector(`#btn${type}`); // referencia qual dinâmicamente qual elemento html selecionar com base no type (color ou amount)
+    let typeBtn = document.querySelector(`#btn${type}`); // referencia dinâmicamente qual elemento html selecionar com base no type (color ou amount)
     let valueBtn = parseInt(typeBtn.textContent); // converte o valor de typeBtn em número inteiro
     const newValueBtn = operationNumber(arrow, valueBtn); // retorna para newValueBtn o resultado de operationNumber
     typeBtn.textContent = newValueBtn; // rendeiza novo valor na tela
@@ -34,10 +29,4 @@ export function controllerNumbersCounter() {
 
         btnArrow.addEventListener('click' , () => renderNumbers(arrow, type))
     });
-}
-
-
-
-function pt(p) {
-    console.log(p);
 }
