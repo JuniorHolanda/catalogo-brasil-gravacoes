@@ -1,61 +1,43 @@
 const listArrowsCalc = document.querySelectorAll('.controller__arrows');
-let color = 1
-let amount = 1
+
 
 const btnAmount = document.querySelector('#btnGravacao');
-const btnCores = document.querySelector('#btnCores');
+const btnColor = document.querySelector('#btnCores');
 
-
-btnCores.innerHTML = color
-
-function calculateResult(arrow, type) {
-
-
-
-    if (arrow === "increment" && type === "color") {
-        if (color == 5) {
-            color=0
-        }
-        color++
-        btnCores.innerHTML = color
-
-    } else if (arrow === "increment" && type === "amount") {
-        if (amount == 2) {
-            amount=0
-        }
-        amount++
-        btnAmount.innerHTML = amount
-    } else if (arrow === "decrement" && type === "color") {
-        if (color > 1 && color <= 5) {
-            color--
-            btnCores.innerHTML = color
-        } else {
-            color = 5
-            btnCores.innerHTML = color
-        }
-    } else if (arrow === "decrement" && type === "amount") {
-        if (amount > 1) {
-            amount--
-            btnAmount.innerHTML = amount
-        } else if (amount < 2) {
-            amount++
-            btnAmount.innerHTML = amount
-        }
+//arrow identifica se a seta incrementa ou decrementa nas extruturas condicionais
+//identifica o tipo do botão, se é de quntidade ou de cores
+//identifica o valor de botão com o número 
+function operationNumber(arrow, valueBtn) {
+    
+    if (arrow === 'increment') { 
+        valueBtn = (valueBtn < 5) ? valueBtn + 1 : 1; // Volta para 1 se for maior que 5
+    } else if (arrow === 'decrement') {
+        valueBtn = (valueBtn > 1) ? valueBtn - 1 : 5; // Volta para 5 se for menor que 1
     }
+    return valueBtn // retorna novo valor
+}
+// RENDERIZA O VALOR DE COLOR E AMOUNT
+function renderNumbers(arrow, type) {
+    let typeBtn = document.querySelector(`#btn${type}`); // referencia qual dinâmicamente qual elemento html selecionar com base no type (color ou amount)
+    let valueBtn = parseInt(typeBtn.textContent); // converte o valor de typeBtn em número inteiro
+    const newValueBtn = operationNumber(arrow, valueBtn); // retorna para newValueBtn o resultado de operationNumber
+    typeBtn.textContent = newValueBtn; // rendeiza novo valor na tela
 }
 
-export function calcOrcamento() {
+// CRIA UM OUVINTE DE CLICK PARA CADA SETA
+export function controllerNumbersCounter() {
     listArrowsCalc.forEach((btnArrow) => {
+        // captura o elemento data.arrow que indica se a seta é de incremento ou decremento
         const arrow = btnArrow.dataset.arrow;
+        // captura o elemento data.type que indica se a seta é do color ou amount
         const type = btnArrow.dataset.type;
-        btnArrow.addEventListener('click' , () => calculateResult(arrow, type))
+
+        btnArrow.addEventListener('click' , () => renderNumbers(arrow, type))
     });
 }
 
 
 
-
-
 function pt(p) {
-    console.log(p)
+    console.log(p);
 }

@@ -1,3 +1,3 @@
-import { calcOrcamento } from "./assets/js/calcOrcamento.js";
+import { controllerNumbersCounter } from "./assets/js/calcOrcamento.js";
 
-calcOrcamento()
+controllerNumbersCounter();
