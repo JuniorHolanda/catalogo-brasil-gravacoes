@@ -8,15 +8,15 @@
     text-align: center;
 
     .description__title{
-        @include font ($secundary-font, clamp(1em, 4vw, 3em), 1px, 600)
+        @include font ($secundary-font, $secundary-color, clamp(1em, 4vw, 3em), 1px, 600)
     }
 
     .description__sub-title{
-        @include font ($secundary-font, clamp(1em, 2vw, 2em), 1px, 600)
+        @include font ($secundary-font, $secundary-color, clamp(1em, 2vw, 2em), 1px, 600)
     }
 
     .description__text{
-        @include font ($secundary-font, clamp(1em, 2vw, 1.5em), 1px, 600)
+        @include font ($secundary-font, $secundary-color, clamp(1em, 2vw, 1.5em), 1px, 600)
     }
 }
 
@@ -63,7 +63,7 @@
         background-color: rgb(228, 228, 228);
 
         .controller__label{
-            @include font ($secundary-font, clamp(1em, 2vw, 1.5em), 0px, 600);
+            @include font ($secundary-font, $secundary-color, clamp(1em, 2vw, 1.5em), 0px, 600);
             color: #4b3d66;
             padding: 20px;
             border-radius: 10px;

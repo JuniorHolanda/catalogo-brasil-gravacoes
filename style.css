@@ -37,7 +37,7 @@ input {
   align-items: center;
   gap: 30px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: white;
 }
 .header-catalog .header-catalog__menu {
   display: grid;
@@ -45,7 +45,7 @@ input {
   width: 90%;
   gap: 10px;
   padding: 30px;
-  border-bottom: solid #f3f3f3 1px;
+  border-bottom: solid #e5e5e5 1px;
 }
 .header-catalog .header-catalog__menu .header-catalog__container-logo {
   display: flex;
@@ -70,13 +70,15 @@ input {
 }
 .header-catalog .header-catalog__menu .header-catalog__nav .header-catalog__list .header-catalog__item {
   text-align: center;
-  background-color: #eeeeee;
-  padding: 10px 20px;
-  border-radius: 10px;
   font-family: "mono45-headline", monospace;
+  color: red;
   font-size: clamp(0.5rem, 3vw, 1rem);
   letter-spacing: 1px;
   font-weight: 600;
+  color: #14213d;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #e5e5e5;
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container {
   display: flex;
@@ -86,6 +88,7 @@ input {
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container .header-catalog__fale-conosco {
   font-family: "mono45-headline", monospace;
+  color: red;
   font-size: clamp(0.5rem, 3vw, 1rem);
   letter-spacing: 1px;
   font-weight: 600;
@@ -100,6 +103,7 @@ input {
 .header-catalog .header-catalog__title-container .header-catalog__title {
   width: 100%;
   font-family: "mono45-headline", monospace;
+  color: red;
   font-size: clamp(1rem, 10vw, 9rem);
   letter-spacing: 40px;
   font-weight: 600;
@@ -120,6 +124,7 @@ input {
   }
   .header-catalog .header-catalog__title-container .header-catalog__title {
     font-family: "mono45-headline", monospace;
+    color: red;
     font-size: clamp(1rem, 10vw, 9rem);
     letter-spacing: 20px;
     font-weight: 600;
@@ -134,18 +139,21 @@ input {
 }
 .description .description__title {
   font-family: "museo", serif;
+  color: red;
   font-size: clamp(1em, 4vw, 3em);
   letter-spacing: 1px;
   font-weight: 600;
 }
 .description .description__sub-title {
   font-family: "museo", serif;
+  color: red;
   font-size: clamp(1em, 2vw, 2em);
   letter-spacing: 1px;
   font-weight: 600;
 }
 .description .description__text {
   font-family: "museo", serif;
+  color: red;
   font-size: clamp(1em, 2vw, 1.5em);
   letter-spacing: 1px;
   font-weight: 600;
@@ -190,6 +198,7 @@ input {
 }
 .controller .controller__container-btn .controller__label {
   font-family: "museo", serif;
+  color: red;
   font-size: clamp(1em, 2vw, 1.5em);
   letter-spacing: 0px;
   font-weight: 600;
@@ -237,6 +246,7 @@ input {
   width: 100%;
   color: #1696ff;
   font-family: "museo", serif;
+  color: red;
   font-size: clamp(1em, 6vw, 7em);
   letter-spacing: 0px;
   font-weight: 600;
@@ -272,12 +282,14 @@ input {
 }
 .controller .contoller__info .controller__title {
   font-family: "museo", serif;
+  color: red;
   font-size: clamp(1em, 2vw, 2em);
   letter-spacing: 0px;
   font-weight: 100;
 }
 .controller .contoller__info .controller__text {
   font-family: "museo", serif;
+  color: red;
   font-size: clamp(0.7em, 1vw, 1.5em);
   letter-spacing: 0px;
   font-weight: 100;
@@ -289,6 +301,7 @@ input {
   flex-wrap: wrap;
   gap: 10px;
   font-family: "museo", serif;
+  color: red;
   font-size: clamp(1em, 2vw, 1.2em);
   letter-spacing: 0px;
   font-weight: 100;
@@ -311,6 +324,7 @@ input {
   padding: 30px;
   width: 100%;
   font-family: "museo", serif;
+  color: red;
   font-size: clamp(1em, 2vw, 2em);
   letter-spacing: 0px;
   font-weight: 100;

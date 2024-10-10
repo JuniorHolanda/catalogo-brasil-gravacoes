@@ -1,4 +1,6 @@
+import { CreatePrice } from "./modules/Createprice.js";
 const listArrowsCalc = document.querySelectorAll('.controller__arrows'); // referencia as setas
+let containerListPrice = document.getElementById('containerListPrice');
 
 //arrow identifica se a seta incrementa ou decrementa nas extruturas condicionais
 //identifica o tipo do botão, se é de quntidade ou de cores
@@ -16,6 +18,10 @@ function renderNumbers(arrow, type) {
     let typeBtn = document.querySelector(`#btn${type}`); // referencia dinâmicamente qual elemento html selecionar com base no type (color ou amount)
     let valueBtn = parseInt(typeBtn.textContent); // converte o valor de typeBtn em número inteiro
     const newValueBtn = operationNumber(arrow, valueBtn); // retorna para newValueBtn o resultado de operationNumber
+    const valueListPrice = new CreatePrice(newValueBtn)
+    
+    containerListPrice.innerHTML = valueListPrice.createHtmlPrice()
+    
     typeBtn.textContent = newValueBtn; // rendeiza novo valor na tela
 }
 
