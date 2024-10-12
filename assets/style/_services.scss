@@ -6,17 +6,26 @@
     gap: 10px;
     padding: 30px;
     text-align: center;
+    
 
     .description__title{
-        @include font ($secundary-font, $secundary-color, clamp(1em, 4vw, 3em), 1px, 600)
+        @include font ($secondary-font, $secondary-color, clamp(1em, 4vw, 3em));
+        opacity: 0;
+        animation: fade-in-bottom ease-in-out 1s forwards ;
     }
 
     .description__sub-title{
-        @include font ($secundary-font, $secundary-color, clamp(1em, 2vw, 2em), 1px, 600)
+        @include font ($secondary-font, $secondary-color, clamp(1em, 2vw, 2em));
+        opacity: 0;
+        animation: fade-in-bottom ease-in-out 1.3s .5s forwards;
+
     }
 
     .description__text{
-        @include font ($secundary-font, $secundary-color, clamp(1em, 2vw, 1.5em), 1px, 600)
+        @include font ($secondary-font, $secondary-color, clamp(1em, 2vw, 1.5em));
+        opacity: 0;
+        animation: fade-in-bottom ease-in-out 1.6s 1s forwards ;
+
     }
 }
 
@@ -28,10 +37,17 @@
     .carousel__content{
         display: flex;
         gap: 30px;
+        transform: translateX(-100%);
+        transition: 50s linear;
 
         .carousel__img{
             width: 300px;
             border-radius: 30px;
+        }
+
+        video{
+            object-fit: cover;
+            object-position: center;
         }
     }
 }
@@ -56,18 +72,11 @@
         gap: 20px;
         padding: 30px;
 
-        height: fit-content;
+        height: 100%;
         width: 100%;
 
         border-radius: 30px;
-        background-color: rgb(228, 228, 228);
-
-        .controller__label{
-            @include font ($secundary-font, $secundary-color, clamp(1em, 2vw, 1.5em), 0px, 600);
-            color: #4b3d66;
-            padding: 20px;
-            border-radius: 10px;
-        }
+        background-color: $tirth-color;
 
         .controller__container-cores, .controller__container-gravacao{
             position: relative;
@@ -80,7 +89,7 @@
             width: 100%;
             height:300px;
 
-            border: solid 2px rgb(0, 140, 255);
+            border: solid 2px $fourth-color;
             border-radius: 30px;
 
             align-self: center;
@@ -95,7 +104,12 @@
                 width: 100%;
                 height: 50%;
                 cursor: pointer;
-                color: #0099ff;
+                color: $fourth-color;
+                transition: .3s;
+
+                &:hover {
+                    color: $primary-color;
+                }
             }
 
             .controller__arow-down{
@@ -114,25 +128,12 @@
                 justify-content: center;
 
                 width: 100%;
-                color: #1696ff;
-
-                @include font($secundary-font, clamp(1em, 6vw, 7em), 0px, 600);
-
-                
-                appearance: textfield;
-
-                
-
-                &::-webkit-inner-spin-button,
-                &::-webkit-outer-spin-button {
-                    margin: 0;
-                -webkit-appearance: none;
-                }
+                @include font($secondary-font, $fourth-color, clamp(1em, 6vw, 7em));
             }
         }
 
         .controller__container-cores{
-            grid-area: 1/1/2/2;
+            grid-area: 1/1/2/2;;
         }
         .controller__label-cores{
             grid-area:2/1/3/2;
@@ -154,17 +155,21 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 20px;
+        
         border-radius: 30px;
         padding: 30px;
-        background-color: #ebebeb;
+        background-color: $tirth-color;
 
         .controller__title{
-            @include font($secundary-font, clamp(1em, 2vw, 2em), 0px, 100);
-            
+            @include font ($primary-font, $secondary-color, clamp(1rem, 2vw, 3rem));
+            animation: tracking-in-contract ease-in-out 1s;
         }
     
         .controller__text{
-            @include font($secundary-font, clamp(.7em, 1vw, 1.5em), 0px, 100);
+            @include font($secondary-font, $fourth-color, clamp(.7em, 1vw, 1.5em));
+            animation: slide-in-top ease-in .6s infinite alternate;
+
         }
 
     }
@@ -174,23 +179,38 @@
 
         display: flex;
         justify-content: center;
-
         flex-wrap: wrap;
         gap: 10px;
 
-        @include font($secundary-font, clamp(1em, 2vw, 1.2em), 0px, 100);
-
         .controller__price-value{
-            flex-grow: 1;
             display: flex;
+            flex-grow: 1;
             justify-content: center;
             align-items: center;
-            max-width: 100%;
             padding: 10px;
-            background-color: rgb(221, 221, 221);
+            
+            max-width: 100%;
+            
             border-radius: 10px;
-        }
+            background-color: $primary-color;
+            
+            @include font($secondary-font, $white, clamp(.7em, 1vw, 1.2em));
+            animation: colorBtnIncrement ease-in .1s;
+            transition: .3s;
 
+            &:hover{
+                background-color: $secondary-color;
+                color: $tirth-color;
+
+                strong{
+                    color: $primary-color;
+                }
+            }
+
+            strong{
+                color: $secondary-color;
+            }
+        }
     }
 
     .controller__action{
@@ -202,9 +222,15 @@
 
         padding: 30px;
         width: 100%;
-        @include font($secundary-font, clamp(1em, 2vw, 2em), 0px, 100);
 
         border-radius: 30px;
-        background-color: #1696ff;
+        border: $fourth-color 3px solid;
+        transition: .3s;
+
+        @include font($secondary-font, $fourth-color, clamp(1em, 2vw, 2em));
+
+        &:hover{
+            background-color: $fourth-color;
+        }
     }
 }

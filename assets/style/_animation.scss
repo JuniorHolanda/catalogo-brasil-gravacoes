@@ -1,0 +1,59 @@
+@keyframes tracking-in-contract {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+    }
+    100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+    }
+}
+
+@keyframes colorBtnIncrement {
+    0%{
+        background-color: #fca311ff; //cor única, não usar variável
+    }
+    100%{
+        background-color: $tirth-color;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    opacity: 0;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    }
+}

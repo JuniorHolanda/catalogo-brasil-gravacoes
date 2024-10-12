@@ -1,36 +1,53 @@
 @import url("https://use.typekit.net/oqh1shf.css");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
 }
-
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 0;
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
-
-a,
-ul,
-li,
-ol {
-  text-decoration: none;
-  list-style-type: none;
+@keyframes colorBtnIncrement {
+  0% {
+    background-color: #fca311;
+  }
+  100% {
+    background-color: #e5e5e5;
+  }
 }
-
-a:visited {
-  color: inherit;
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-
-button,
-input {
-  border: none;
-  outline: none;
-  background-color: transparent;
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-
 .header-catalog {
   display: flex;
   flex-direction: column;
@@ -71,27 +88,17 @@ input {
 .header-catalog .header-catalog__menu .header-catalog__nav .header-catalog__list .header-catalog__item {
   text-align: center;
   font-family: "mono45-headline", monospace;
-  color: red;
-  font-size: clamp(0.5rem, 3vw, 1rem);
-  letter-spacing: 1px;
-  font-weight: 600;
-  color: #14213d;
+  color: rgb(32, 51, 92);
+  font-size: clamp(0.51em, 1vw, 1em);
   padding: 10px 20px;
   border-radius: 10px;
-  background-color: #e5e5e5;
+  border: solid #e5e5e5 1px;
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container {
   display: flex;
   justify-content: end;
   gap: 10px;
   align-items: center;
-}
-.header-catalog .header-catalog__menu .header-catalog__whatsapp-container .header-catalog__fale-conosco {
-  font-family: "mono45-headline", monospace;
-  color: red;
-  font-size: clamp(0.5rem, 3vw, 1rem);
-  letter-spacing: 1px;
-  font-weight: 600;
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container .header-catalog__whatsapp-icon {
   font-size: 2em;
@@ -103,10 +110,9 @@ input {
 .header-catalog .header-catalog__title-container .header-catalog__title {
   width: 100%;
   font-family: "mono45-headline", monospace;
-  color: red;
+  color: rgb(32, 51, 92);
   font-size: clamp(1rem, 10vw, 9rem);
-  letter-spacing: 40px;
-  font-weight: 600;
+  animation: tracking-in-contract ease-in-out 1s;
   text-align: center;
 }
 
@@ -124,12 +130,42 @@ input {
   }
   .header-catalog .header-catalog__title-container .header-catalog__title {
     font-family: "mono45-headline", monospace;
-    color: red;
+    color: rgb(32, 51, 92);
     font-size: clamp(1rem, 10vw, 9rem);
-    letter-spacing: 20px;
-    font-weight: 600;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+ul,
+li,
+ol {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
 .description {
   display: flex;
   flex-direction: column;
@@ -139,24 +175,24 @@ input {
 }
 .description .description__title {
   font-family: "museo", serif;
-  color: red;
+  color: rgb(32, 51, 92);
   font-size: clamp(1em, 4vw, 3em);
-  letter-spacing: 1px;
-  font-weight: 600;
+  opacity: 0;
+  animation: fade-in-bottom ease-in-out 1s forwards;
 }
 .description .description__sub-title {
   font-family: "museo", serif;
-  color: red;
+  color: rgb(32, 51, 92);
   font-size: clamp(1em, 2vw, 2em);
-  letter-spacing: 1px;
-  font-weight: 600;
+  opacity: 0;
+  animation: fade-in-bottom ease-in-out 1.3s 0.5s forwards;
 }
 .description .description__text {
   font-family: "museo", serif;
-  color: red;
+  color: rgb(32, 51, 92);
   font-size: clamp(1em, 2vw, 1.5em);
-  letter-spacing: 1px;
-  font-weight: 600;
+  opacity: 0;
+  animation: fade-in-bottom ease-in-out 1.6s 1s forwards;
 }
 
 .carousel {
@@ -167,10 +203,18 @@ input {
 .carousel .carousel__content {
   display: flex;
   gap: 30px;
+  transform: translateX(-100%);
+  transition: 50s linear;
 }
 .carousel .carousel__content .carousel__img {
   width: 300px;
   border-radius: 30px;
+}
+.carousel .carousel__content video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .controller {
@@ -190,21 +234,10 @@ input {
   text-align: center;
   gap: 20px;
   padding: 30px;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   width: 100%;
   border-radius: 30px;
-  background-color: rgb(228, 228, 228);
-}
-.controller .controller__container-btn .controller__label {
-  font-family: "museo", serif;
-  color: red;
-  font-size: clamp(1em, 2vw, 1.5em);
-  letter-spacing: 0px;
-  font-weight: 600;
-  color: #4b3d66;
-  padding: 20px;
-  border-radius: 10px;
+  background-color: #e5e5e5;
 }
 .controller .controller__container-btn .controller__container-cores, .controller .controller__container-btn .controller__container-gravacao {
   position: relative;
@@ -215,7 +248,7 @@ input {
   gap: 10px;
   width: 100%;
   height: 300px;
-  border: solid 2px rgb(0, 140, 255);
+  border: solid 2px #417af3;
   border-radius: 30px;
   align-self: center;
   justify-self: center;
@@ -229,7 +262,11 @@ input {
   width: 100%;
   height: 50%;
   cursor: pointer;
-  color: #0099ff;
+  color: #417af3;
+  transition: 0.3s;
+}
+.controller .controller__container-btn .controller__container-cores .controller__arrows:hover, .controller .controller__container-btn .controller__container-gravacao .controller__arrows:hover {
+  color: #fca311;
 }
 .controller .controller__container-btn .controller__container-cores .controller__arow-down, .controller .controller__container-btn .controller__container-gravacao .controller__arow-down {
   align-items: end;
@@ -244,19 +281,9 @@ input {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  color: #1696ff;
   font-family: "museo", serif;
-  color: red;
+  color: #417af3;
   font-size: clamp(1em, 6vw, 7em);
-  letter-spacing: 0px;
-  font-weight: 600;
-  -webkit-appearance: textfield;
-     -moz-appearance: textfield;
-          appearance: textfield;
-}
-.controller .controller__container-btn .controller__container-cores .controller__btn::-webkit-inner-spin-button, .controller .controller__container-btn .controller__container-cores .controller__btn::-webkit-outer-spin-button, .controller .controller__container-btn .controller__container-gravacao .controller__btn::-webkit-inner-spin-button, .controller .controller__container-btn .controller__container-gravacao .controller__btn::-webkit-outer-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
 }
 .controller .controller__container-btn .controller__container-cores {
   grid-area: 1/1/2/2;
@@ -276,23 +303,22 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   border-radius: 30px;
   padding: 30px;
-  background-color: #ebebeb;
+  background-color: #e5e5e5;
 }
 .controller .contoller__info .controller__title {
-  font-family: "museo", serif;
-  color: red;
-  font-size: clamp(1em, 2vw, 2em);
-  letter-spacing: 0px;
-  font-weight: 100;
+  font-family: "mono45-headline", monospace;
+  color: rgb(32, 51, 92);
+  font-size: clamp(1rem, 2vw, 3rem);
+  animation: tracking-in-contract ease-in-out 1s;
 }
 .controller .contoller__info .controller__text {
   font-family: "museo", serif;
-  color: red;
+  color: #417af3;
   font-size: clamp(0.7em, 1vw, 1.5em);
-  letter-spacing: 0px;
-  font-weight: 100;
+  animation: slide-in-top ease-in 0.6s infinite alternate;
 }
 .controller .controller__container-price {
   grid-area: 2/2/3/3;
@@ -300,21 +326,31 @@ input {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  font-family: "museo", serif;
-  color: red;
-  font-size: clamp(1em, 2vw, 1.2em);
-  letter-spacing: 0px;
-  font-weight: 100;
 }
 .controller .controller__container-price .controller__price-value {
-  flex-grow: 1;
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
   padding: 10px;
-  background-color: rgb(221, 221, 221);
+  max-width: 100%;
   border-radius: 10px;
+  background-color: #fca311;
+  font-family: "museo", serif;
+  color: white;
+  font-size: clamp(0.7em, 1vw, 1.2em);
+  animation: colorBtnIncrement ease-in 0.1s;
+  transition: 0.3s;
+}
+.controller .controller__container-price .controller__price-value:hover {
+  background-color: rgb(32, 51, 92);
+  color: #e5e5e5;
+}
+.controller .controller__container-price .controller__price-value:hover strong {
+  color: #fca311;
+}
+.controller .controller__container-price .controller__price-value strong {
+  color: rgb(32, 51, 92);
 }
 .controller .controller__action {
   grid-area: 3/2/4/3;
@@ -323,13 +359,15 @@ input {
   align-items: center;
   padding: 30px;
   width: 100%;
-  font-family: "museo", serif;
-  color: red;
-  font-size: clamp(1em, 2vw, 2em);
-  letter-spacing: 0px;
-  font-weight: 100;
   border-radius: 30px;
-  background-color: #1696ff;
+  border: #417af3 3px solid;
+  transition: 0.3s;
+  font-family: "museo", serif;
+  color: #417af3;
+  font-size: clamp(1em, 2vw, 2em);
+}
+.controller .controller__action:hover {
+  background-color: #417af3;
 }
 
 body {

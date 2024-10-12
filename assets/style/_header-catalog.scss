@@ -42,11 +42,10 @@
 
                 .header-catalog__item{
                     text-align: center;
-                    @include font ($primary-font, $secundary-color, clamp(.5rem, 3vw, 1rem), 1px, 600);
-                    color: $secundary-color;
+                    @include font($primary-font, $secondary-color, clamp(.51em, 1vw, 1em));
                     padding: 10px 20px;
                     border-radius: 10px;
-                    background-color: $tirth-color;
+                    border: solid $tirth-color 1px;
                     
                 }
             }
@@ -57,10 +56,6 @@
             justify-content: end;
             gap: 10px;
             align-items: center;
-
-            .header-catalog__fale-conosco{
-                @include font ($primary-font, $secundary-color, clamp(.5rem, 3vw, 1rem), 1px, 600);
-            }
 
             .header-catalog__whatsapp-icon{
                 font-size: 2em;
@@ -74,7 +69,8 @@
         
         .header-catalog__title{
             width: 100%;
-            @include font ($primary-font, $secundary-color, clamp(1rem, 10vw, 9rem), 40px, 600);
+            @include font ($primary-font, $secondary-color, clamp(1rem, 10vw, 9rem));
+            animation: tracking-in-contract ease-in-out 1s;
             text-align: center;
         }
     }
@@ -107,7 +103,7 @@
         .header-catalog__title-container{
 
             .header-catalog__title{
-                @include font ($primary-font, $secundary-color, clamp(1rem, 10vw, 9rem), 20px, 600);
+                @include font ($primary-font, $secondary-color, clamp(1rem, 10vw, 9rem));
             }
         }
     }

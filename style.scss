@@ -1,13 +1,16 @@
-//fonts
-@import url("https://use.typekit.net/oqh1shf.css");
+//bibliotecas
+@import url("https://use.typekit.net/oqh1shf.css");//lib adobe font
+
 
 //utilities
-@import'assets/style/mixin';
 @import'assets/style/variable';
+@import'assets/style/mixin';
+@import'assets/style/animation';
+
 
 //pages
+@import 'assets/style/header-catalog';
 @import'assets/style/reset';
-@import'assets/style/header-catalog';
 @import'assets/style/services';
 
 
