@@ -27,10 +27,12 @@
 
 @keyframes colorBtnIncrement {
     0%{
-        background-color: #fca311ff; //cor única, não usar variável
+        opacity: 0;
+        transform: translateY(-10px);
     }
     100%{
-        background-color: $tirth-color;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -55,5 +57,11 @@
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
+    }
+}
+
+@keyframes scrollInfinite {
+    to {
+        transform: translateX(calc(-50% - 15px));
     }
 }

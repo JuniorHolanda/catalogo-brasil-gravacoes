@@ -37,8 +37,9 @@
     .carousel__content{
         display: flex;
         gap: 30px;
-        transform: translateX(-100%);
-        transition: 50s linear;
+        transform: translateX(0);
+        animation: scrollInfinite 60s linear infinite;
+
 
         .carousel__img{
             width: 300px;
@@ -61,11 +62,10 @@
     padding: 30px;
 
     .controller__container-btn{
-
-        grid-area: 1/1/4/2;
-        grid-template: 1fr auto / 1fr 1fr;
-
+        grid-area: 1/2/4/2;
+        
         display: grid;
+        grid-template: 1fr auto / 1fr 1fr;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -85,6 +85,7 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
+            padding: 10px;
 
             width: 100%;
             height:300px;
@@ -126,30 +127,27 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-
                 width: 100%;
-                @include font($secondary-font, $fourth-color, clamp(1em, 6vw, 7em));
+                @include font($secondary-font, $fourth-color, clamp(1em, 4vw, 7em));
+            }
+
+            .controller__text{
+                @include font($secondary-font, $fourth-color, clamp(1em, 2vw, 2em));
+
             }
         }
 
         .controller__container-cores{
             grid-area: 1/1/2/2;;
         }
-        .controller__label-cores{
-            grid-area:2/1/3/2;
-        }
 
         .controller__container-gravacao{
             grid-area: 1/2/2/3;
         }
-        .controller__label-gravacao{
-            grid-area: 2/2/3/3;
-        }
-
     }
 
     .contoller__info{
-        grid-area: 1/2/2/3;
+        grid-area: 1/1/2/2;
 
         display: flex;
         flex-direction: column;
@@ -175,7 +173,7 @@
     }
 
     .controller__container-price{
-        grid-area: 2/2/3/3;
+        grid-area: 2/1/3/2;
 
         display: flex;
         justify-content: center;
@@ -190,12 +188,12 @@
             padding: 10px;
             
             max-width: 100%;
-            
             border-radius: 10px;
             background-color: $primary-color;
+            opacity: 0;
             
             @include font($secondary-font, $white, clamp(.7em, 1vw, 1.2em));
-            animation: colorBtnIncrement ease-in .1s;
+            animation: colorBtnIncrement ease-in .3s forwards;
             transition: .3s;
 
             &:hover{
@@ -214,7 +212,7 @@
     }
 
     .controller__action{
-        grid-area: 3/2/4/3;
+        grid-area: 3/1/4/2;
 
         display: flex;
         justify-content: center;
@@ -230,7 +228,36 @@
         @include font($secondary-font, $fourth-color, clamp(1em, 2vw, 2em));
 
         &:hover{
+            color: $tirth-color;
             background-color: $fourth-color;
+        }
+    }
+}
+
+
+/*==================================smartphone==================================*/
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .controller{ 
+        .controller__container-btn{
+            grid-area: 1/2/4/2;
+            max-height: 100vh;
+                
+            .controller__container-cores, .controller__container-gravacao{
+                .controller__btn{
+                    @include font($secondary-font, $fourth-color, clamp(4em, 6vw, 7em));
+                }
+            }
+    
+            .controller__container-cores{
+                grid-area: 1/1/2/3;
+                max-height: 40vh;
+            }
+    
+            .controller__container-gravacao{
+                grid-area: 2/1/3/3;
+                max-height: 40vh;
+            }
         }
     }
 }

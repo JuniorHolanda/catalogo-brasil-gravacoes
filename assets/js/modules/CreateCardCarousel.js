@@ -1,8 +1,9 @@
 export class CreateCardCarousel {
-    constructor(indexImg, category, media, alt) {
+    constructor(indexImg, category, media, extension) {
         this.indexImg = indexImg,
         this.category = category,
-        this.media = media
+            this.media = media
+        this.extension = extension
         //this.alt = usar metodo de atribuição de valores para determinar esse atributo
     }
 
@@ -13,22 +14,10 @@ export class CreateCardCarousel {
     */
 
     createCardCarousel() {
-        switch (this.media) {
-            case 'img':
-                const createCard = document.createElement('img');
-                createCard.classList.add('carousel__img');
-                createCard.src = `/assets/img/${this.category}/${this.indexImg}.jpg`;
-                return createCard;
-            
-            case 'video':
-                const createCardVideo = document.createElement('video')
-                createCardVideo.classList.add('carousel__img');
-                createCardVideo.src = `/assets/video/${this.indexImg}.mov`
-                createCardVideo.muted = true;
-                createCardVideo.autoplay = true;
-                createCardVideo.loop = true;
-                return createCardVideo;
-        }
+        const createCard = document.createElement('img');
+        createCard.classList.add('carousel__img');
+        createCard.src = `/assets/img/${this.category}/${this.indexImg}.${this.extension}`;
+        return createCard;
     }
 }
 
