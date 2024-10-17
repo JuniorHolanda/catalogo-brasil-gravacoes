@@ -414,8 +414,9 @@ body {
 }
 body .content {
   display: flex;
+  flex-direction: column;
 }
-body .content .silk-tampo-peq {
+body .content .blockHtml {
   display: flex;
   flex-direction: column;
   justify-content: center;

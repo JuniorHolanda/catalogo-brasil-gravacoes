@@ -22,8 +22,9 @@ body {
 
     .content{
         display: flex;
+        flex-direction: column;
 
-        .silk-tampo-peq{
+        .blockHtml{
             display: flex;
             flex-direction: column;
             justify-content: center;
