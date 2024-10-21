@@ -50,17 +50,17 @@ export class CreateBlockHtml {
             <div class="controller" id="${this.dinamicId}">
                 <div class="controller__container-btn">
                     <div class="controller__container-cores">
-                        <i class="controller__arrows controller__arow-up fa-solid fa-angle-up" data-arrow="increment" data-type="Color" data-component="${this.category}"></i>
-                        <h2 class="controller__btn" id="btnColor" id="btn${this.category}" >1</h2>
+                        <i class="controller__arrows controller__arow-up fa-solid fa-angle-up" data-arrow="increment" data-type="Color" data-component="${this.title}"></i>
+                        <h2 class="controller__btn" id="btnColor${this.title}" >1</h2>
                         <p class="controller__text">Quantidade de cores</p>
-                        <i class="controller__arrows controller__arow-down fa-solid fa-angle-down" data-arrow="decrement" data-type="Color" data-component="${this.category}"></i>
+                        <i class="controller__arrows controller__arow-down fa-solid fa-angle-down" data-arrow="decrement" data-type="Color" data-component="${this.title}"></i>
                     </div>
                     
                     <div class="controller__container-gravacao">
-                        <i class="controller__arrows controller__arow-up fa-solid fa-angle-up" data-arrow="increment" data-type="Amount" data-component="${this.category}"></i>
-                        <h2 class="controller__btn" id="btnAmount" id="btn${this.category}">1</h2>
+                        <i class="controller__arrows controller__arow-up fa-solid fa-angle-up" data-arrow="increment" data-type="Amount" data-component="${this.title}"></i>
+                        <h2 class="controller__btn" id="btnAmount${this.title}">1</h2>
                         <p class="controller__text">Quantidade de lados</p>
-                        <i class="controller__arrows controller__arow-down fa-solid fa-angle-down" data-arrow="decrement" data-type="Amount" data-component="${this.category}"></i>
+                        <i class="controller__arrows controller__arow-down fa-solid fa-angle-down" data-arrow="decrement" data-type="Amount" data-component="${this.title}"></i>
                     </div>
                 </div>
                 
@@ -69,13 +69,8 @@ export class CreateBlockHtml {
                     <p class="controller__text">1 Cor | 1 Gravação</p>
                 </div>
 
-                <ul class="controller__container-price" id="container_list_price_${this.category}">
-                    <li class="controller__price-value"><strong class="controller__price-strong">1-100</strong> R$ 165,00</li>
-                    <li class="controller__price-value"><strong class="controller__price-strong">101-300</strong> R$ 1,55</li>
-                    <li class="controller__price-value"><strong class="controller__price-strong">301-500</strong> R$ 1,30</li>
-                    <li class="controller__price-value"><strong class="controller__price-strong">501-700</strong> R$ 1,00</li>
-                    <li class="controller__price-value"><strong class="controller__price-strong">701-1000</strong> R$ 0,99</li>
-                    <li class="controller__price-value"><strong class="controller__price-strong">1001-5000</strong> R$ 0,85</li>
+                <ul class="controller__container-price" id="containerListPrice${this.title}">
+
                 </ul>
 
                 <a href="#" class="controller__action">Fale conosco</a>

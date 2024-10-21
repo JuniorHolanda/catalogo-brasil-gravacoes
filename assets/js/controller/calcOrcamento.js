@@ -14,15 +14,14 @@ function operationNumber(arrow, valueBtn) {
 }
 // RENDERIZA O VALOR DE COLOR E AMOUNT
 function renderNumbers(arrow, type, component) {
-    let containerListPrice = document.getElementById(`container_list_price_${component}`);
+    //referencia o container dos preços
+    let containerListPrice = document.getElementById(`containerListPrice${component}`);
 
-    let colorCount = document.querySelectorAll('.controller__btn')
-    console.log(colorCount)
     
-    let typeBtn = document.querySelector(`#btn${type}`);
+    let typeBtn = document.querySelector(`#btn${type}${component}`);
     let valueBtn = parseInt(typeBtn.textContent); // converte o valor de typeBtn em número inteiro
     const newValueBtn = operationNumber(arrow, valueBtn); // retorna para newValueBtn o resultado de operationNumber
-    const valueListPrice = new CreatePrice(newValueBtn, component)
+    const valueListPrice = new CreatePrice(newValueBtn, component, typeBtn);
 
     
     typeBtn.textContent = newValueBtn; //atualiza o valor de typeBtn
@@ -40,6 +39,8 @@ export function controllerNumbersCounter() {
         const type = btnArrow.dataset.type;
         // captura o elemento data.component que indica de qual container é a seta
         const component = btnArrow.dataset.component
+
+        renderNumbers(arrow, type, component)
 
         btnArrow.addEventListener('click' , () => renderNumbers(arrow, type, component))
     });
