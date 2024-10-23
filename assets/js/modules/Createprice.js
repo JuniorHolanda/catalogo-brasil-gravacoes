@@ -39,13 +39,14 @@ export class CreatePrice {
         //converte o btnAmount para number
         const valueAmountBtn = parseInt(amountBtn.innerHTML)
 
-        console.log (valueAmountBtn)
+        // listas de preços padrão pra todos os produtos
+        const listAmountProduct = ['1-100 ', '101-300', '301-500', '501-700', '701-1000', '1001-5000']
         
         const listPrice = this.price
         const liContainer = document.createElement('ul');
         liContainer.className = 'controller__container-price';
         
-        listPrice.forEach(element => {
+        listPrice.forEach((element, index) => {
             let result = '' 
             if (this.typeBtn == 'Color') {
                 result = valueAmountBtn * this.multiplier * element // multiplica o preço do listPrice com base no valor multiplicador
@@ -54,9 +55,10 @@ export class CreatePrice {
             }
             const liElement = document.createElement('li');
             liElement.className = 'controller__price-value';
-            liElement.innerHTML = `<strong class="controller__price-strong">1-100</strong> R$ ${(result).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`
+            liElement.innerHTML = `<strong class="controller__price-strong">${listAmountProduct[index]}</strong> R$ ${(result).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`
             liContainer.appendChild(liElement);
         });
         return liContainer
     }
 }
+

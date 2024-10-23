@@ -180,56 +180,13 @@
         gap: 10px;
 
         .controller__price-value{
-            display: flex;
-            flex-grow: 1;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            
-            max-width: 100%;
-            border-radius: 10px;
-            background-color: $primary-color;
-            opacity: 0;
-            
-            @include font($secondary-font, $white, clamp(.7em, 1vw, 1.2em));
-            animation: colorBtnIncrement ease-in .3s forwards;
-            transition: .3s;
-
-            &:hover{
-                background-color: $secondary-color;
-                color: $tirth-color;
-
-                strong{
-                    color: $primary-color;
-                }
-            }
-
-            strong{
-                color: $secondary-color;
-            }
+            @include price;
         }
     }
 
     .controller__action{
         grid-area: 3/1/4/2;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        padding: 30px;
-        width: 100%;
-
-        border-radius: 30px;
-        border: $fourth-color 3px solid;
-        transition: .3s;
-
-        @include font($secondary-font, $fourth-color, clamp(1em, 2vw, 2em));
-
-        &:hover{
-            color: $tirth-color;
-            background-color: $fourth-color;
-        }
+        @include btn-action;
     }
 }
 
