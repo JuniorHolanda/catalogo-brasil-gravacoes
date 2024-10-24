@@ -25,34 +25,6 @@
             opacity: 0;
             animation: fade-in-bottom ease-in-out 1s forwards;
         }
-        .laser__container-measure{
-            display: flex;
-            gap: 30px;
-            
-            .laser__item-measure{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 10px;
-    
-                height: 100%;
-                width: 100%;
-                
-                border-radius: 10px;
-                background-color: $primary-color;
-                transition: .3s;
-                
-                &:hover {
-                    background-color: $fourth-color;
-                }
-                button {
-                    width: 100%;
-                    height: 100%;
-                    @include font ($secondary-font, $secondary-color, clamp(.7rem, 1vw, 1.5rem));
-                    cursor: pointer;
-                }
-            }
-        }
     }
 
     .laser__content{
@@ -178,24 +150,34 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: 10px;
-
+                    
                     height: 100%;
                     width: 100%;
                     
-                    border-radius: 10px;
-                    background-color: $primary-color;
-                    transition: .3s;
                     
-                    &:hover {
-                        background-color: $fourth-color;
-                    }
-                    
-                    button {
+                    .laser__btn-measure-controll {
+                        @include font ($secondary-font, $secondary-color, clamp(.7rem, 1vw, 1.5rem));
+                        
                         width: 100%;
                         height: 100%;
-                        @include font ($secondary-font, $secondary-color, clamp(.7rem, 1vw, 1.5rem));
+                        padding: 10px;
+                        
                         cursor: pointer;
+                        border-radius: 10px;
+                        background-color: $primary-color;
+                        transition: .3s;
+                        
+                        &:hover {
+                            background-color: $v-primary-color;
+                        }
+                    }
+
+                    .laser__btn-measure-controll--active{
+                        background-color: $fourth-color;
+
+                        &:hover {
+                            background-color: $fourth-color;
+                        }
                     }
                 }
             }

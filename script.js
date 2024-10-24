@@ -6,15 +6,13 @@ import { controllerNumbersCounter } from "./assets/js/controller/calcOrcamento.j
 import { renderCarousel } from "./assets/js/controller/controllerCarousel.js";
 //clona o carrossel
 import { cloneCarousel } from "./assets/js/controller/cloneCarousel.js";
+//import
+import { renderLaser } from "./assets/js/controller/renderLaser.js";
 
 render();
 
+renderLaser();
 controllerNumbersCounter();
 renderCarousel('tampografia');
 renderCarousel('serigrafia');
 cloneCarousel();
-
-// ferramenta para imprimir APAGAR
-export function pt(p) {
-    return console.log(p)
-}
