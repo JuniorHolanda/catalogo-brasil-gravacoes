@@ -4,7 +4,7 @@
     align-items: center;
     padding: 30px;
     gap: 30px;
-    background-color: $tirth-color;
+    background-color: $semi-white;
     width: 100%;
 
     .laser__header{
@@ -16,7 +16,7 @@
         width: 90%;
         
         .laser__title{
-            @include font ($secondary-font, $secondary-color, clamp(1em, 4vw, 3em));
+            @include font ($secondary-font, $secondary-color, clamp(2em, 4vw, 3em));
             opacity: 0;
             animation: fade-in-bottom ease-in-out .5s forwards ;
         }
@@ -26,53 +26,63 @@
             animation: fade-in-bottom ease-in-out 1s forwards;
         }
     }
-
+    
     .laser__content{
         display: grid;
-        grid-template: repeat(3, auto) / repeat(3, auto);
+        grid-template: repeat(3, auto) / 1fr 1fr 1fr;
         gap: 30px;
         width: 90%;
-
-        .laser__container-reference{
+        
+        //==========================MOBILE================================
+        @media (min-width: 200px) and (max-width: 599px){
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            padding: 30px;
-            gap: 30px;
-
-            @include font ($secondary-font, $secondary-color, clamp(1rem, 2vw, 3rem));
-            background-color: $white;
-            border-radius: 30px;
+            width: 100%;
+        }
+        //=========================END MOBILE=============================
+        
+        .laser__container-reference{
+            @include reference-container();
+            
+            //==========================TABLET================================
+            @media (min-width: 600px) and (max-width: 970px){
+                grid-area: 1/1/2/2;
+            }
+            //=========================END-TABLET=============================
+            
+            //==========================MOBILE================================
+            @media (min-width: 200px) and (max-width: 599px){
+                order: 2;
+            }
+            //=========================END MOBILE=============================
             
             .laser__container-list{
                 grid-area: 1/1/2/2;
+                @include reference-ul ();
                 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 30px;
-                flex-wrap: wrap;
-                @include font ($secondary-font, $secondary-color, clamp(.7rem, 1vw, 1.5rem));
-    
                 .laser__item-reference{
-                    text-align: center;
-                    padding: 10px 20px;
-                    border-radius: 10px;
-                    border: solid $tirth-color 1px;
-                    flex-grow: 1;
+                    @include reference-item();
                 }
             }
         }
-
-
+        
+        
         .laser__container-price{
-            grid-area: 2/1/3/2;
+            grid-area: 2/1/3/3;
+            @include font ($secondary-font, $secondary-color, clamp(1em, 2vw, 3em));
 
-            @media (min-width: 600px) and (max-width: 1165px){
-                grid-area: 2/1/3/3;
+
+            //==========================TABLET================================
+            @media (min-width: 600px) and (max-width: 970px){
+                grid-area: 2/1/3/2;
             }
+            //=========================END-TABLET=============================
+
+            //==========================MOBILE================================
+            @media (min-width: 200px) and (max-width: 599px){
+                order: 4;
+            }
+            //=========================END MOBILE=============================
 
             display: flex;
             justify-content: center;
@@ -85,11 +95,19 @@
         }
 
         .laser__container-btn-action{
-            grid-area: 3/1/4/2;
+            grid-area: 3/1/4/3;
 
-            @media (min-width: 600px) and (max-width: 1165px){
-                grid-area: 3/1/3/3;
+            //==========================TABLET================================
+            @media (min-width: 600px) and (max-width: 970px){
+                grid-area: 3/1/3/4;
             }
+            //=========================END-TABLET=============================
+
+            //==========================MOBILE================================
+            @media (min-width: 200px) and (max-width: 599px){
+                order: 5;
+            }
+            //=========================END MOBILE=============================
 
             .laser__btn-action{
                 @include btn-action;
@@ -97,11 +115,19 @@
         }
 
         .laser__container-img{
-            grid-area: 1/2/4/3;
+            grid-area: 1/2/2/3;
 
-            @media (min-width: 600px) and (max-width: 1165px){
-                grid-area: 2/3/4/4;
+            //==========================TABLET================================
+            @media (min-width: 600px) and (max-width: 970px){
+                grid-area: 1/2/2/4;
             }
+            //=========================END-TABLET=============================
+
+            //==========================MOBILE================================
+            @media (min-width: 200px) and (max-width: 599px){
+                order: 1;
+            }
+            //=========================END MOBILE=============================
 
             display: flex;
             overflow: hidden;
@@ -116,21 +142,30 @@
         .laser__container-controlls{
             grid-area: 1/3/4/4;
 
-            @media (min-width: 600px) and (max-width: 1165px){
-                grid-area: 1/2/2/4;
-            }
             
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 30px;
             padding: 30px;
-
+            
             border-radius: 30px;
             border: solid $fourth-color;
+
+            //==========================TABLET================================
+            @media (min-width: 600px) and (max-width: 970px){
+                grid-area: 2/2/3/4;
+            }
+            //=========================END-TABLET=============================
+
+            //==========================MOBILE================================
+            @media (min-width: 200px) and (max-width: 599px){
+                order: 3;
+            }
+            //=========================END MOBILE=============================
             
             .laser__controlls-title{
-                @include font ($secondary-font, $secondary-color, clamp(1em, 4vw, 3em));
+                @include font ($secondary-font, $secondary-color, clamp(1rem, 2vw, 3rem));
                 text-align: center;
                 opacity: 0;
                 animation: fade-in-bottom ease-in-out .5s forwards ;
@@ -156,7 +191,7 @@
                     
                     
                     .laser__btn-measure-controll {
-                        @include font ($secondary-font, $secondary-color, clamp(.7rem, 1vw, 1.5rem));
+                        @include font ($secondary-font, $secondary-color, clamp(1em, 2vw, 3em));
                         
                         width: 100%;
                         height: 100%;

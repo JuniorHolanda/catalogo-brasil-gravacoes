@@ -1,7 +1,7 @@
 @import url("https://use.typekit.net/oqh1shf.css");
 @keyframes tracking-in-contract {
   0% {
-    letter-spacing: 1em;
+    letter-spacing: 10px;
     opacity: 0;
   }
   40% {
@@ -64,10 +64,12 @@
   background-color: white;
 }
 .header-catalog .header-catalog__menu {
-  display: grid;
-  grid-template: 1fr/15% 70% 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 90%;
-  gap: 10px;
+  gap: 30px;
   padding: 30px;
   border-bottom: solid #e5e5e5 1px;
 }
@@ -77,70 +79,38 @@
   align-items: center;
 }
 .header-catalog .header-catalog__menu .header-catalog__container-logo .header-catalog__logo-img {
-  width: 100%;
-  max-width: 200px;
-}
-.header-catalog .header-catalog__menu .header-catalog__nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header-catalog .header-catalog__menu .header-catalog__nav .header-catalog__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-  width: 100%;
-}
-.header-catalog .header-catalog__menu .header-catalog__nav .header-catalog__list .header-catalog__item {
-  text-align: center;
-  font-family: "mono45-headline", monospace;
-  color: rgb(32, 51, 92);
-  font-size: clamp(0.51em, 1vw, 1em);
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: solid #e5e5e5 1px;
+  width: clamp(160px, 15vw, 600px);
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container {
   display: flex;
   justify-content: end;
   gap: 10px;
   align-items: center;
+  font-family: "museo", serif;
+  color: white;
+  font-size: clamp(1em, 2vw, 7em);
+  background-color: #417af3;
+  padding: 10px;
+  border-radius: 10px;
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container .header-catalog__whatsapp-icon {
-  font-size: 2em;
+  font-size: 1em;
 }
 .header-catalog .header-catalog__title-container {
-  padding: 30px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
 }
 .header-catalog .header-catalog__title-container .header-catalog__title {
   width: 100%;
   font-family: "mono45-headline", monospace;
   color: rgb(32, 51, 92);
-  font-size: clamp(1rem, 10vw, 9rem);
+  font-size: clamp(3rem, 10vw, 9rem);
   animation: tracking-in-contract ease-in-out 1s;
   text-align: center;
 }
 
-/*====================================TABLET=======================================*/
-@media (min-width: 400px) and (max-width: 990px) {
-  .header-catalog .header-catalog__menu {
-    grid-template: 1fr 1fr 1fr/1fr;
-  }
-  .header-catalog .header-catalog__menu .header-catalog__nav .header-catalog__list .header-catalog__item {
-    flex-grow: 1;
-  }
-  .header-catalog .header-catalog__menu .header-catalog__whatsapp-container {
-    justify-content: center;
-    padding: 0 30px;
-  }
-  .header-catalog .header-catalog__title-container .header-catalog__title {
-    font-family: "mono45-headline", monospace;
-    color: rgb(32, 51, 92);
-    font-size: clamp(1rem, 10vw, 9rem);
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -189,7 +159,7 @@ input {
 .description .description__title {
   font-family: "museo", serif;
   color: rgb(32, 51, 92);
-  font-size: clamp(1em, 4vw, 3em);
+  font-size: clamp(2em, 4vw, 3em);
   opacity: 0;
   animation: fade-in-bottom ease-in-out 1s forwards;
 }
@@ -239,6 +209,20 @@ input {
   height: fit-content;
   padding: 30px 30px 30px 0;
 }
+@media (min-width: 600px) and (max-width: 970px) {
+  .controller {
+    grid-area: 2/2/3/4;
+  }
+}
+@media (min-width: 200px) and (max-width: 675px) {
+  .controller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 0;
+  }
+}
 .controller .controller__container-btn {
   grid-area: 1/2/4/2;
   display: grid;
@@ -252,6 +236,13 @@ input {
   width: 100%;
   border-radius: 30px;
   background-color: #e5e5e5;
+}
+@media (min-width: 200px) and (max-width: 675px) {
+  .controller .controller__container-btn {
+    padding: 10px;
+    display: flex;
+    order: 2;
+  }
 }
 .controller .controller__container-btn .controller__container-cores, .controller .controller__container-btn .controller__container-gravacao {
   position: relative;
@@ -298,7 +289,7 @@ input {
   width: 100%;
   font-family: "museo", serif;
   color: #417af3;
-  font-size: clamp(1em, 4vw, 7em);
+  font-size: clamp(5em, 6vw, 7em);
 }
 .controller .controller__container-btn .controller__container-cores .controller__text, .controller .controller__container-btn .controller__container-gravacao .controller__text {
   font-family: "museo", serif;
@@ -315,24 +306,43 @@ input {
   grid-area: 1/1/2/2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
-  border-radius: 30px;
+  justify-content: center;
   padding: 30px;
-  background-color: #e5e5e5;
+  gap: 30px;
+  font-family: "museo", serif;
+  color: rgb(32, 51, 92);
+  font-size: clamp(1rem, 2vw, 3rem);
+  background-color: white;
+  border-radius: 30px;
+}
+@media (min-width: 200px) and (max-width: 675px) {
+  .controller .contoller__info {
+    padding: 10px;
+    display: flex;
+    order: 1;
+  }
 }
 .controller .contoller__info .controller__title {
-  font-family: "mono45-headline", monospace;
+  font-family: "museo", serif;
   color: rgb(32, 51, 92);
   font-size: clamp(1rem, 2vw, 3rem);
   animation: tracking-in-contract ease-in-out 1s;
 }
-.controller .contoller__info .controller__text {
+.controller .contoller__info .controller__container-reference {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 1vw, 30px);
+  flex-wrap: wrap;
   font-family: "museo", serif;
-  color: #417af3;
-  font-size: clamp(0.7em, 1vw, 1.5em);
-  animation: slide-in-top ease-in 0.6s infinite alternate;
+  color: rgb(32, 51, 92);
+  font-size: clamp(0.7rem, 1vw, 1.5rem);
+}
+.controller .contoller__info .controller__container-reference .controller__reference-li {
+  padding: 10px;
+  border: solid #e5e5e5;
+  border-radius: 10px;
 }
 .controller .controller__container-price {
   grid-area: 2/1/3/2;
@@ -340,6 +350,11 @@ input {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+}
+@media (min-width: 200px) and (max-width: 675px) {
+  .controller .controller__container-price {
+    order: 3;
+  }
 }
 .controller .controller__container-price .controller__price-value {
   display: flex;
@@ -379,34 +394,19 @@ input {
   color: #e5e5e5;
   background-color: #417af3;
 }
-
-/*==================================smartphone==================================*/
-@media (min-width: 400px) and (max-width: 600px) {
-  .controller .controller__container-btn {
-    grid-area: 1/2/4/2;
-    max-height: 100vh;
-  }
-  .controller .controller__container-btn .controller__container-cores .controller__btn, .controller .controller__container-btn .controller__container-gravacao .controller__btn {
-    font-family: "museo", serif;
-    color: #417af3;
-    font-size: clamp(4em, 6vw, 7em);
-  }
-  .controller .controller__container-btn .controller__container-cores {
-    grid-area: 1/1/2/3;
-    max-height: 40vh;
-  }
-  .controller .controller__container-btn .controller__container-gravacao {
-    grid-area: 2/1/3/3;
-    max-height: 40vh;
+@media (min-width: 200px) and (max-width: 675px) {
+  .controller .controller__action {
+    order: 4;
   }
 }
+
 .laser {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px;
   gap: 30px;
-  background-color: #e5e5e5;
+  background-color: #f1f1f1;
   width: 100%;
 }
 .laser .laser__header {
@@ -420,7 +420,7 @@ input {
 .laser .laser__header .laser__title {
   font-family: "museo", serif;
   color: rgb(32, 51, 92);
-  font-size: clamp(1em, 4vw, 3em);
+  font-size: clamp(2em, 4vw, 3em);
   opacity: 0;
   animation: fade-in-bottom ease-in-out 0.5s forwards;
 }
@@ -433,9 +433,16 @@ input {
 }
 .laser .laser__content {
   display: grid;
-  grid-template: repeat(3, auto)/repeat(3, auto);
+  grid-template: repeat(3, auto)/1fr 1fr 1fr;
   gap: 30px;
   width: 90%;
+}
+@media (min-width: 200px) and (max-width: 599px) {
+  .laser .laser__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .laser .laser__content .laser__container-reference {
   display: flex;
@@ -450,12 +457,22 @@ input {
   background-color: white;
   border-radius: 30px;
 }
+@media (min-width: 600px) and (max-width: 970px) {
+  .laser .laser__content .laser__container-reference {
+    grid-area: 1/1/2/2;
+  }
+}
+@media (min-width: 200px) and (max-width: 599px) {
+  .laser .laser__content .laser__container-reference {
+    order: 2;
+  }
+}
 .laser .laser__content .laser__container-reference .laser__container-list {
   grid-area: 1/1/2/2;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: clamp(10px, 1vw, 30px);
   flex-wrap: wrap;
   font-family: "museo", serif;
   color: rgb(32, 51, 92);
@@ -467,17 +484,26 @@ input {
   border-radius: 10px;
   border: solid #e5e5e5 1px;
   flex-grow: 1;
+  font-size: clamp(0.5rem, 1vw, 1.5rem);
 }
 .laser .laser__content .laser__container-price {
-  grid-area: 2/1/3/2;
+  grid-area: 2/1/3/3;
+  font-family: "museo", serif;
+  color: rgb(32, 51, 92);
+  font-size: clamp(1em, 2vw, 3em);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
 }
-@media (min-width: 600px) and (max-width: 1165px) {
+@media (min-width: 600px) and (max-width: 970px) {
   .laser .laser__content .laser__container-price {
-    grid-area: 2/1/3/3;
+    grid-area: 2/1/3/2;
+  }
+}
+@media (min-width: 200px) and (max-width: 599px) {
+  .laser .laser__content .laser__container-price {
+    order: 4;
   }
 }
 .laser .laser__content .laser__container-price .laser__item-price {
@@ -500,11 +526,16 @@ input {
   color: rgb(32, 51, 92);
 }
 .laser .laser__content .laser__container-btn-action {
-  grid-area: 3/1/4/2;
+  grid-area: 3/1/4/3;
 }
-@media (min-width: 600px) and (max-width: 1165px) {
+@media (min-width: 600px) and (max-width: 970px) {
   .laser .laser__content .laser__container-btn-action {
-    grid-area: 3/1/3/3;
+    grid-area: 3/1/3/4;
+  }
+}
+@media (min-width: 200px) and (max-width: 599px) {
+  .laser .laser__content .laser__container-btn-action {
+    order: 5;
   }
 }
 .laser .laser__content .laser__container-btn-action .laser__btn-action {
@@ -526,14 +557,19 @@ input {
   background-color: #417af3;
 }
 .laser .laser__content .laser__container-img {
-  grid-area: 1/2/4/3;
+  grid-area: 1/2/2/3;
   display: flex;
   overflow: hidden;
   border-radius: 30px;
 }
-@media (min-width: 600px) and (max-width: 1165px) {
+@media (min-width: 600px) and (max-width: 970px) {
   .laser .laser__content .laser__container-img {
-    grid-area: 2/3/4/4;
+    grid-area: 1/2/2/4;
+  }
+}
+@media (min-width: 200px) and (max-width: 599px) {
+  .laser .laser__content .laser__container-img {
+    order: 1;
   }
 }
 .laser .laser__content .laser__container-img .laser__img {
@@ -551,15 +587,20 @@ input {
   border-radius: 30px;
   border: solid #417af3;
 }
-@media (min-width: 600px) and (max-width: 1165px) {
+@media (min-width: 600px) and (max-width: 970px) {
   .laser .laser__content .laser__container-controlls {
-    grid-area: 1/2/2/4;
+    grid-area: 2/2/3/4;
+  }
+}
+@media (min-width: 200px) and (max-width: 599px) {
+  .laser .laser__content .laser__container-controlls {
+    order: 3;
   }
 }
 .laser .laser__content .laser__container-controlls .laser__controlls-title {
   font-family: "museo", serif;
   color: rgb(32, 51, 92);
-  font-size: clamp(1em, 4vw, 3em);
+  font-size: clamp(1rem, 2vw, 3rem);
   text-align: center;
   opacity: 0;
   animation: fade-in-bottom ease-in-out 0.5s forwards;
@@ -583,7 +624,7 @@ input {
 .laser .laser__content .laser__container-controlls .laser__container-measure-controlls .laser__measure-controll .laser__btn-measure-controll {
   font-family: "museo", serif;
   color: rgb(32, 51, 92);
-  font-size: clamp(0.7rem, 1vw, 1.5rem);
+  font-size: clamp(1em, 2vw, 3em);
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -606,7 +647,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: rgb(241, 241, 241);
+  background-color: #f1f1f1;
 }
 body .content {
   display: flex;

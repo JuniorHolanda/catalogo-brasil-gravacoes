@@ -25,7 +25,7 @@ export class CreateBlockHtml {
 
     determineDescription(category) {
         const descriptionMap = {
-            'tampografia': 'Preços para produtos pequenos tais como chaveiros, fones,  porta-joias, carregadores entre outros.',
+            'tampografia': 'Preços para produtos pequenos tais como.',
             'serigrafia': 'Produtos feitos de tecidos precisam ser gravados com SilkScreen'
         };
         return descriptionMap[category] || 'Categoria não encontrada';
@@ -65,8 +65,15 @@ export class CreateBlockHtml {
                 </div>
                 
                 <div class="contoller__info">
-                    <h2 class="controller__title">Orçamento</h2>
-                    <p class="controller__text">1 Cor | 1 Gravação</p>
+                    <h2 class="controller__title">Referência</h2>
+                    <ul class="controller__container-reference">
+                        <li class="controller__reference-li">chaveiros</li>
+                        <li class="controller__reference-li">fones</li>
+                        <li class="controller__reference-li">porta-joias</li>
+                        <li class="controller__reference-li">carregador</li>
+                        <li class="controller__reference-li">plaquinha</li>
+                        <li class="controller__reference-li">caneta</li>
+                    </ul>
                 </div>
 
                 <ul class="controller__container-price" id="containerListPrice${this.title}">

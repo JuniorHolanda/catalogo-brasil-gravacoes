@@ -48,3 +48,38 @@
         background-color: $fourth-color;
     }
 }
+
+// usadas em container de referencia
+@mixin reference-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+    gap: 30px;
+
+    @include font ($secondary-font, $secondary-color, clamp(1rem, 2vw, 3rem));
+    background-color: $white;
+    border-radius: 30px;
+}
+
+// usado em todo ul de referências
+@mixin reference-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 1vw, 30px);
+    flex-wrap: wrap;
+    @include font ($secondary-font, $secondary-color, clamp(.7rem, 1vw, 1.5rem));
+}
+
+// usado em todo item da lista de referência
+@mixin reference-item{
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: solid $tirth-color 1px;
+    flex-grow: 1;
+    font-size: clamp(.5rem, 1vw, 1.5rem);
+}
