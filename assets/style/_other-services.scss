@@ -8,11 +8,15 @@
 
     .others__title{
         @include font ($secondary-font, $secondary-color, clamp(2em, 4vw, 3em));
+        width: 90%;
+        text-align: center;
     }
 
     .others__text{
         @include font ($secondary-font, $secondary-color, clamp(1em, 2vw, 1.5em));
+        width: 90%;
         overflow-wrap: break-word;
+        text-align: center;
     }
 
     .others__container-cards{
@@ -41,6 +45,14 @@
 
             .others__card-title{
                 @include font ($secondary-font, $secondary-color, clamp(1em, 2vw, 2em));
+                border-bottom: solid $secondary-color 1px;
+                padding: 5px;
+                font-weight: 800;
+            }
+
+            .others__text-card{
+                @include font ($secondary-font, $secondary-color, clamp(1em, 2vw, 1.5em));
+                overflow-wrap: break-word;
             }
 
             .others__card-link{

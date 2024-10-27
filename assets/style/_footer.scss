@@ -67,7 +67,7 @@
         padding: 10px;
         width: 100%;
         border-top: solid $tirth-color;
-        @include font ($secondary-font, $tirth-color, clamp(.5em, .7vw, 1em));
+        @include font ($secondary-font, $tirth-color, clamp(.7em, .7vw, 1em));
 
         strong{
             font-style: italic;

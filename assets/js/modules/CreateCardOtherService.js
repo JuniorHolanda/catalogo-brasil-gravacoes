@@ -1,15 +1,21 @@
 export class CreateCardOtherService {
     constructor(service) {
         this.service = service
-        this.title = this.capitalizedElement(this.service)
+        this.title = this.determineTitle(this.service)
         this.text = this.determineText(this.service)
     }
 
-    // Capitaliza a string para o título
-    capitalizedElement(service) {
-        const elementCapitalized = service.charAt(0).toUpperCase() + service.slice(1).toLowerCase();
-        return elementCapitalized
+    // determina o titulo do card
+    determineTitle(service) {
+        const descriptionMap = {
+            'laser': 'Laser Rotativo',
+            'dtf': 'DTF',
+            'baixo-relevo': 'Baixo Relevo',
+            'laser-co2': 'Laser Co2'
+        };
+        return descriptionMap[service] || 'Serviço não encontrado';
     }
+
     // determina a descrição do card
     determineText(service) {
         const descriptionMap = {
@@ -26,7 +32,7 @@ export class CreateCardOtherService {
             <div class="others__card-content">
                 <img class="other__img" src="assets/img/others/${this.service}.jpg" alt="">
                 <h3 class="others__card-title">${this.title}</h3>
-                <p class="others__text">${this.text}</p>
+                <p class="others__text-card">${this.text}</p>
                 <a href="https://api.whatsapp.com/send?phone=551155113227" class="others__card-link">Solicitar Orçamento</a>
             </div>
         `

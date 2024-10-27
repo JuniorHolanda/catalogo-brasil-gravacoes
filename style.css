@@ -655,12 +655,16 @@ input {
   font-family: "museo", serif;
   color: #2d5588;
   font-size: clamp(2em, 4vw, 3em);
+  width: 90%;
+  text-align: center;
 }
 .others .others__text {
   font-family: "museo", serif;
   color: #2d5588;
   font-size: clamp(1em, 2vw, 1.5em);
+  width: 90%;
   overflow-wrap: break-word;
+  text-align: center;
 }
 .others .others__container-cards {
   display: flex;
@@ -687,6 +691,15 @@ input {
   font-family: "museo", serif;
   color: #2d5588;
   font-size: clamp(1em, 2vw, 2em);
+  border-bottom: solid #2d5588 1px;
+  padding: 5px;
+  font-weight: 800;
+}
+.others .others__container-cards .others__card-content .others__text-card {
+  font-family: "museo", serif;
+  color: #2d5588;
+  font-size: clamp(1em, 2vw, 1.5em);
+  overflow-wrap: break-word;
 }
 .others .others__container-cards .others__card-content .others__card-link {
   display: flex;
@@ -767,7 +780,7 @@ input {
   border-top: solid #e5e5e5;
   font-family: "museo", serif;
   color: #e5e5e5;
-  font-size: clamp(0.5em, 0.7vw, 1em);
+  font-size: clamp(0.7em, 0.7vw, 1em);
 }
 .footer .footer__ass strong {
   font-style: italic;
