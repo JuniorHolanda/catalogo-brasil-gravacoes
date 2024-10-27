@@ -8,7 +8,7 @@ export class CreateCardCarousel {
 
     createCardCarousel() {
         const createCard = document.createElement('img');
-        createCard.classList.add('carousel__img');
+        createCard.classList.add(`carousel__img-${this.container}`);
         createCard.src = `/assets/img/${this.container}/${this.indexImg}.${this.extension}`;
         return createCard;
     }

@@ -23,7 +23,12 @@
     .description__text{
         @include font ($secondary-font, $secondary-color, clamp(1em, 2vw, 1.5em));
         opacity: 0;
-        animation: fade-in-bottom ease-in-out 1.6s 1s forwards ;
+        animation: fade-in-bottom ease-in-out 1.6s 1s forwards;
+
+        .description__link {
+            color: $v-primary-color;
+            font-weight: 600;
+        }
 
     }
 }
@@ -37,17 +42,12 @@
         display: flex;
         gap: 30px;
         transform: translateX(0);
-        animation: scrollInfinite 60s linear infinite;
+        animation: scrollInfinite 40s linear infinite;
 
 
-        .carousel__img{
+        .carousel__img-tampografia, .carousel__img-serigrafia {
             width: 300px;
             border-radius: 30px;
-        }
-
-        video{
-            object-fit: cover;
-            object-position: center;
         }
     }
 }

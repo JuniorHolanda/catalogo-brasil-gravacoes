@@ -89,7 +89,7 @@
   font-family: "museo", serif;
   color: white;
   font-size: clamp(1em, 2vw, 7em);
-  background-color: #417af3;
+  background-color: #23468C;
   padding: 10px;
   border-radius: 10px;
 }
@@ -105,7 +105,7 @@
 .header-catalog .header-catalog__title-container .header-catalog__title {
   width: 100%;
   font-family: "mono45-headline", monospace;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(3rem, 10vw, 9rem);
   animation: tracking-in-contract ease-in-out 1s;
   text-align: center;
@@ -158,24 +158,28 @@ input {
 }
 .description .description__title {
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(2em, 4vw, 3em);
   opacity: 0;
   animation: fade-in-bottom ease-in-out 1s forwards;
 }
 .description .description__sub-title {
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(1em, 2vw, 2em);
   opacity: 0;
   animation: fade-in-bottom ease-in-out 1.3s 0.5s forwards;
 }
 .description .description__text {
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(1em, 2vw, 1.5em);
   opacity: 0;
   animation: fade-in-bottom ease-in-out 1.6s 1s forwards;
+}
+.description .description__text .description__link {
+  color: #F28B0C;
+  font-weight: 600;
 }
 
 .carousel {
@@ -187,17 +191,11 @@ input {
   display: flex;
   gap: 30px;
   transform: translateX(0);
-  animation: scrollInfinite 60s linear infinite;
+  animation: scrollInfinite 40s linear infinite;
 }
-.carousel .carousel__content .carousel__img {
+.carousel .carousel__content .carousel__img-tampografia, .carousel .carousel__content .carousel__img-serigrafia {
   width: 300px;
   border-radius: 30px;
-}
-.carousel .carousel__content video {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 
 .controller {
@@ -254,7 +252,7 @@ input {
   padding: 10px;
   width: 100%;
   height: 300px;
-  border: solid 2px #417af3;
+  border: solid 2px #23468C;
   border-radius: 30px;
   align-self: center;
   justify-self: center;
@@ -268,11 +266,11 @@ input {
   width: 100%;
   height: 50%;
   cursor: pointer;
-  color: #417af3;
+  color: #23468C;
   transition: 0.3s;
 }
 .controller .controller__container-btn .controller__container-cores .controller__arrows:hover, .controller .controller__container-btn .controller__container-gravacao .controller__arrows:hover {
-  color: #fca311;
+  color: #F2A516;
 }
 .controller .controller__container-btn .controller__container-cores .controller__arow-down, .controller .controller__container-btn .controller__container-gravacao .controller__arow-down {
   align-items: end;
@@ -288,12 +286,12 @@ input {
   justify-content: center;
   width: 100%;
   font-family: "museo", serif;
-  color: #417af3;
+  color: #23468C;
   font-size: clamp(5em, 6vw, 7em);
 }
 .controller .controller__container-btn .controller__container-cores .controller__text, .controller .controller__container-btn .controller__container-gravacao .controller__text {
   font-family: "museo", serif;
-  color: #417af3;
+  color: #23468C;
   font-size: clamp(1em, 2vw, 2em);
 }
 .controller .controller__container-btn .controller__container-cores {
@@ -311,7 +309,7 @@ input {
   padding: 30px;
   gap: 30px;
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(1rem, 2vw, 3rem);
   background-color: white;
   border-radius: 30px;
@@ -325,7 +323,7 @@ input {
 }
 .controller .contoller__info .controller__title {
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(1rem, 2vw, 3rem);
   animation: tracking-in-contract ease-in-out 1s;
 }
@@ -336,7 +334,7 @@ input {
   gap: clamp(10px, 1vw, 30px);
   flex-wrap: wrap;
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(0.7rem, 1vw, 1.5rem);
 }
 .controller .contoller__info .controller__container-reference .controller__reference-li {
@@ -362,9 +360,10 @@ input {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  gap: 10px;
   max-width: 100%;
   border-radius: 10px;
-  background-color: #417af3;
+  background-color: #23468C;
   opacity: 0;
   font-family: "museo", serif;
   color: white;
@@ -373,7 +372,7 @@ input {
   transition: 0.3s;
 }
 .controller .controller__container-price .controller__price-value strong {
-  color: rgb(32, 51, 92);
+  font-weight: 600;
 }
 .controller .controller__action {
   grid-area: 3/1/4/2;
@@ -384,15 +383,15 @@ input {
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  border: #417af3 3px solid;
+  border: #23468C 3px solid;
   transition: 0.3s;
   font-family: "museo", serif;
-  color: #417af3;
+  color: #23468C;
   font-size: clamp(1em, 2vw, 2em);
 }
 .controller .controller__action:hover {
   color: #e5e5e5;
-  background-color: #417af3;
+  background-color: #23468C;
 }
 @media (min-width: 200px) and (max-width: 675px) {
   .controller .controller__action {
@@ -419,14 +418,14 @@ input {
 }
 .laser .laser__header .laser__title {
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(2em, 4vw, 3em);
   opacity: 0;
   animation: fade-in-bottom ease-in-out 0.5s forwards;
 }
 .laser .laser__header .laser__text {
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(1em, 2vw, 1.5em);
   opacity: 0;
   animation: fade-in-bottom ease-in-out 1s forwards;
@@ -452,7 +451,7 @@ input {
   padding: 30px;
   gap: 30px;
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(1rem, 2vw, 3rem);
   background-color: white;
   border-radius: 30px;
@@ -475,7 +474,7 @@ input {
   gap: clamp(10px, 1vw, 30px);
   flex-wrap: wrap;
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(0.7rem, 1vw, 1.5rem);
 }
 .laser .laser__content .laser__container-reference .laser__container-list .laser__item-reference {
@@ -489,7 +488,7 @@ input {
 .laser .laser__content .laser__container-price {
   grid-area: 2/1/3/3;
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(1em, 2vw, 3em);
   display: flex;
   justify-content: center;
@@ -512,9 +511,10 @@ input {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  gap: 10px;
   max-width: 100%;
   border-radius: 10px;
-  background-color: #417af3;
+  background-color: #23468C;
   opacity: 0;
   font-family: "museo", serif;
   color: white;
@@ -523,7 +523,7 @@ input {
   transition: 0.3s;
 }
 .laser .laser__content .laser__container-price .laser__item-price strong {
-  color: rgb(32, 51, 92);
+  font-weight: 600;
 }
 .laser .laser__content .laser__container-btn-action {
   grid-area: 3/1/4/3;
@@ -546,15 +546,15 @@ input {
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  border: #417af3 3px solid;
+  border: #23468C 3px solid;
   transition: 0.3s;
   font-family: "museo", serif;
-  color: #417af3;
+  color: #23468C;
   font-size: clamp(1em, 2vw, 2em);
 }
 .laser .laser__content .laser__container-btn-action .laser__btn-action:hover {
   color: #e5e5e5;
-  background-color: #417af3;
+  background-color: #23468C;
 }
 .laser .laser__content .laser__container-img {
   grid-area: 1/2/2/3;
@@ -585,7 +585,7 @@ input {
   gap: 30px;
   padding: 30px;
   border-radius: 30px;
-  border: solid #417af3;
+  border: solid #23468C;
 }
 @media (min-width: 600px) and (max-width: 970px) {
   .laser .laser__content .laser__container-controlls {
@@ -599,7 +599,7 @@ input {
 }
 .laser .laser__content .laser__container-controlls .laser__controlls-title {
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(1rem, 2vw, 3rem);
   text-align: center;
   opacity: 0;
@@ -623,35 +623,167 @@ input {
 }
 .laser .laser__content .laser__container-controlls .laser__container-measure-controlls .laser__measure-controll .laser__btn-measure-controll {
   font-family: "museo", serif;
-  color: rgb(32, 51, 92);
+  color: #2d5588;
   font-size: clamp(1em, 2vw, 3em);
   width: 100%;
   height: 100%;
   padding: 10px;
   cursor: pointer;
   border-radius: 10px;
-  background-color: #fca311;
+  background-color: #F2A516;
   transition: 0.3s;
 }
 .laser .laser__content .laser__container-controlls .laser__container-measure-controlls .laser__measure-controll .laser__btn-measure-controll:hover {
-  background-color: rgb(212, 135, 10);
+  background-color: #F28B0C;
 }
 .laser .laser__content .laser__container-controlls .laser__container-measure-controlls .laser__measure-controll .laser__btn-measure-controll--active {
-  background-color: #417af3;
+  background-color: #23468C;
 }
 .laser .laser__content .laser__container-controlls .laser__container-measure-controlls .laser__measure-controll .laser__btn-measure-controll--active:hover {
-  background-color: #417af3;
+  background-color: #23468C;
+}
+
+.others {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+.others .others__title {
+  font-family: "museo", serif;
+  color: #2d5588;
+  font-size: clamp(2em, 4vw, 3em);
+}
+.others .others__text {
+  font-family: "museo", serif;
+  color: #2d5588;
+  font-size: clamp(1em, 2vw, 1.5em);
+  overflow-wrap: break-word;
+}
+.others .others__container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 90%;
+}
+.others .others__container-cards .others__card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 10px;
+  width: 400px;
+  background-color: #e5e5e5;
+  border-radius: 30px;
+}
+.others .others__container-cards .others__card-content .other__img {
+  width: 100%;
+  border-radius: 30px;
+}
+.others .others__container-cards .others__card-content .others__card-title {
+  font-family: "museo", serif;
+  color: #2d5588;
+  font-size: clamp(1em, 2vw, 2em);
+}
+.others .others__container-cards .others__card-content .others__card-link {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "museo", serif;
+  color: white;
+  font-size: clamp(1em, 2vw, 1.5em);
+  background-color: #2d5588;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  gap: 10px;
+  width: 100%;
+  height: 50vh;
+  background-color: white;
+}
+.footer .footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  width: 90%;
+}
+.footer .footer__contact .footer__icons {
+  display: flex;
+  align-items: center;
+  font-size: clamp(1em, 0.5vw, 1em);
+  color: #2d5588;
+}
+.footer .footer__contact .footer__title {
+  font-family: "museo", serif;
+  color: #2d5588;
+  font-size: clamp(2em, 4vw, 3em);
+  text-align: center;
+}
+.footer .footer__contact .footer__container-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.footer .footer__contact .footer__container-email .footer__email {
+  font-family: "museo", serif;
+  color: #2d5588;
+  font-size: clamp(1em, 2vw, 1.5em);
+}
+.footer .footer__contact .footer__container-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.footer .footer__contact .footer__container-phone .footer__phone {
+  font-family: "museo", serif;
+  color: #2d5588;
+  font-size: clamp(1em, 2vw, 1.5em);
+}
+.footer .footer__contact .footer__container-phone span {
+  font-size: clamp(0.5em, 1vw, 1em);
+}
+.footer .footer__ass {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  border-top: solid #e5e5e5;
+  font-family: "museo", serif;
+  color: #e5e5e5;
+  font-size: clamp(0.5em, 0.7vw, 1em);
+}
+.footer .footer__ass strong {
+  font-style: italic;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   width: 100%;
   background-color: #f1f1f1;
 }
 body .content {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 body .content .blockHtml {
   display: flex;

@@ -1,0 +1,57 @@
+.others{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+
+    .others__title{
+        @include font ($secondary-font, $secondary-color, clamp(2em, 4vw, 3em));
+    }
+
+    .others__text{
+        @include font ($secondary-font, $secondary-color, clamp(1em, 2vw, 1.5em));
+        overflow-wrap: break-word;
+    }
+
+    .others__container-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        width: 90%;
+        
+        .others__card-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            padding: 30px;
+            gap: 10px;
+            
+            width: 400px;
+            background-color: $tirth-color;
+            border-radius: 30px;
+
+            .other__img{
+                width: 100%;
+                border-radius: 30px;
+            }
+
+            .others__card-title{
+                @include font ($secondary-font, $secondary-color, clamp(1em, 2vw, 2em));
+            }
+
+            .others__card-link{
+                display: flex;
+                padding: 10px;
+                border-radius: 10px;
+                @include font ($secondary-font, $white, clamp(1em, 2vw, 1.5em));
+
+                background-color: $secondary-color;
+                width: fit-content;
+            }
+        }
+    }
+}
