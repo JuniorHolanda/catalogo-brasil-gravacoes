@@ -24,9 +24,10 @@ ol {
     list-style-type: none;
 }
 
-a:visited {
+a:visited, a:active, a:link {
     color: inherit;
 }
+
 
 button,
 input {

@@ -32,7 +32,7 @@ export class CreateLaserHtml {
                         <li class="laser__item-price">1001 - 5000 <strong>R$ 0,50</strong></li>
                     </ul>
                     <div class="laser__container-btn-action">
-                        <a href="https://api.whatsapp.com/send?phone=551155113227" class="laser__btn-action">FALE CONOSCO</a>
+                        <a href="https://api.whatsapp.com/send?phone=551132270968" class="laser__btn-action">FALE CONOSCO</a>
                     </div>
                     <div class="laser__container-img">
                         <img class="laser__img" id="imgLaserReference" src="assets/img/laser/4.jpg" alt="">

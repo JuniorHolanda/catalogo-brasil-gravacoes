@@ -33,7 +33,7 @@ export class CreateCardOtherService {
                 <img class="other__img" src="assets/img/others/${this.service}.jpg" alt="">
                 <h3 class="others__card-title">${this.title}</h3>
                 <p class="others__text-card">${this.text}</p>
-                <a href="https://api.whatsapp.com/send?phone=551155113227" class="others__card-link">Solicitar Orçamento</a>
+                <a href="https://api.whatsapp.com/send?phone=551132270968" class="others__card-link">Solicitar Orçamento</a>
             </div>
         `
     }

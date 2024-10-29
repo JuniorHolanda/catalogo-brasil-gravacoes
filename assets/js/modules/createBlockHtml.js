@@ -25,7 +25,7 @@ export class CreateBlockHtml {
 
     determineDescription(category) {
         const descriptionMap = {
-            'tampografia': 'Personalização com alta qualidade em detalhes e contornos. <br>Para orçamentos em peças grandes, solicite um <a class="description__link" href="#">orçamento personalizado</a>',
+            'tampografia': 'Personalização com alta qualidade em detalhes e contornos. <br>Para orçamentos em peças grandes, solicite um <a class="description__link" href="https://api.whatsapp.com/send?phone=551132270968">orçamento personalizado</a>',
             'serigrafia': 'A serigrafia é uma técnica de personalização que traz cores vivas e durabilidade para brindes personalizados. Ideal para destacar a marca em diversos tipos de materiais com alta qualidade de impressão'
         };
         return descriptionMap[category] || 'Categoria não encontrada';
@@ -72,7 +72,7 @@ export class CreateBlockHtml {
                         
                         </ul>
                         
-                        <a href="https://api.whatsapp.com/send?phone=551155113227" class="controller__action">Fale conosco</a>
+                        <a href="https://api.whatsapp.com/send?phone=551132270968" class="controller__action">Fale conosco</a>
                         </div>
                         <hr>
                         </section>
