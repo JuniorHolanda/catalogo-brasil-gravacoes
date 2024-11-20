@@ -94,6 +94,10 @@
   border-radius: 10px;
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container .header-catalog__whatsapp-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   font-size: 1em;
 }
 .header-catalog .header-catalog__title-container {
@@ -325,6 +329,12 @@ input {
   font-family: "museo", serif;
   color: #2d5588;
   font-size: clamp(1rem, 2vw, 3rem);
+  animation: tracking-in-contract ease-in-out 1s;
+}
+.controller .contoller__info .controller__text {
+  font-family: "museo", serif;
+  color: #2d5588;
+  font-size: clamp(1rem, 1vw, 1rem);
   animation: tracking-in-contract ease-in-out 1s;
 }
 .controller .contoller__info .controller__container-reference {

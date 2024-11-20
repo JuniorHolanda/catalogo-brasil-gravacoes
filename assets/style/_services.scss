@@ -157,7 +157,6 @@
 
             .controller__text{
                 @include font($secondary-font, $fourth-color, clamp(1em, 2vw, 2em));
-
             }
         }
 
@@ -185,6 +184,11 @@
 
         .controller__title{
             @include font ($secondary-font, $secondary-color, clamp(1rem, 2vw, 3rem));
+            animation: tracking-in-contract ease-in-out 1s;
+        }
+
+        .controller__text{
+            @include font ($secondary-font, $secondary-color, clamp(1rem, 1vw, 1rem));
             animation: tracking-in-contract ease-in-out 1s;
         }
     

@@ -15,8 +15,8 @@ function createListReference(element) {
     const containerReference = document.querySelector(`#containerReference${elementCapitalized}`);
 
     const descriptionMap = {
-        'tampografia': ['chaveiros', 'fones', 'porta-joias', 'carregador', 'plaquinha', 'caneta'],
-        'serigrafia': ['Térmica', 'Guarda-chuva', 'Sacola', 'Bolsa', 'Mochila', 'Mala']
+        'tampografia': ['Chaveiros', 'Fone', 'Porta-joias', 'Carregador', 'Plaquinha', 'Caneta', 'Pendrive', 'Caixinha de som', 'Caderno', 'Moleskine'],
+        'serigrafia': ['Térmica', 'Guarda-chuva', 'Sacola', 'Bolsa', 'Mochila', 'Mala', 'Avental', 'Táboa', 'Trash Bag', 'Camiseta']
     };
 
     //validação
