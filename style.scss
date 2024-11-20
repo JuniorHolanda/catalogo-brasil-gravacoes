@@ -1,5 +1,6 @@
 //bibliotecas
-@import url("https://use.typekit.net/oqh1shf.css");//lib adobe font
+@import url("https://use.typekit.net/oqh1shf.css");//adobe font
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Notable&display=swap');//google font
 
 
 //utilities
@@ -21,7 +22,6 @@
 body {
     display: flex;
     flex-direction: column;
-    gap: 30px;
     width: 100%;
     background-color: $semi-white;
 
@@ -29,14 +29,5 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        .blockHtml{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            width: 100%;
-        }
     }
 }

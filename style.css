@@ -1,4 +1,5 @@
 @import url("https://use.typekit.net/oqh1shf.css");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Notable&display=swap");
 @keyframes tracking-in-contract {
   0% {
     letter-spacing: 10px;
@@ -59,19 +60,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
   width: 100%;
-  background-color: white;
+  background-color: #5852F2;
 }
 .header-catalog .header-catalog__menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   gap: 30px;
   padding: 30px;
-  border-bottom: solid #e5e5e5 1px;
+  border-bottom: solid #F0F0F2 1px;
 }
 .header-catalog .header-catalog__menu .header-catalog__container-logo {
   display: flex;
@@ -86,12 +86,11 @@
   justify-content: end;
   gap: 10px;
   align-items: center;
-  font-family: "museo", serif;
+  font-family: "Lexend Zetta", sans-serif;
   color: white;
   font-size: clamp(1em, 2vw, 7em);
-  background-color: #23468C;
+  background-color: #5852F2;
   padding: 10px;
-  border-radius: 10px;
 }
 .header-catalog .header-catalog__menu .header-catalog__whatsapp-container .header-catalog__whatsapp-icon {
   display: flex;
@@ -104,14 +103,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+  padding: 40px 0 60px 0;
+  letter-spacing: 60px;
 }
 .header-catalog .header-catalog__title-container .header-catalog__title {
   width: 100%;
-  font-family: "mono45-headline", monospace;
-  color: #2d5588;
+  font-family: "Notable", sans-serif;
+  color: #91E9F2;
   font-size: clamp(3rem, 10vw, 9rem);
-  animation: tracking-in-contract ease-in-out 1s;
   text-align: center;
 }
 
@@ -129,8 +131,8 @@ h3 {
 }
 
 hr {
-  border: solid #e5e5e5 1px;
-  width: 90%;
+  border: solid #F0F0F2 1px;
+  width: 100%;
 }
 
 a,
@@ -152,72 +154,137 @@ input {
   background-color: transparent;
 }
 
-.description {
+.blockHtml {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 30px;
-  width: 90%;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  background-color: #91E9F2;
 }
-.description .description__title {
-  font-family: "museo", serif;
-  color: #2d5588;
-  font-size: clamp(2em, 4vw, 3em);
-  opacity: 0;
-  animation: fade-in-bottom ease-in-out 1s forwards;
-}
-.description .description__sub-title {
-  font-family: "museo", serif;
-  color: #2d5588;
-  font-size: clamp(1em, 2vw, 2em);
-  opacity: 0;
-  animation: fade-in-bottom ease-in-out 1.3s 0.5s forwards;
-}
-.description .description__text {
-  font-family: "museo", serif;
-  color: #2d5588;
-  font-size: clamp(1em, 2vw, 1.5em);
-  opacity: 0;
-  animation: fade-in-bottom ease-in-out 1.6s 1s forwards;
-}
-.description .description__text .description__link {
-  color: #F28B0C;
-  font-weight: 600;
-}
-
-.carousel {
+.blockHtml .container-main {
   display: flex;
   width: 100%;
-  overflow: hidden;
+  background-color: rgb(97, 97, 107);
 }
-.carousel .carousel__content {
+.blockHtml .container-main .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+  width: 50%;
+  height: 100vh;
+  background-color: white;
+  border: solid red;
+}
+.blockHtml .container-main .description .description-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+}
+.blockHtml .container-main .description .description-header .description__title {
+  position: absolute;
+  transform: translate(-50%);
+  top: 50%;
+  left: 50%;
+  font-family: "Notable", sans-serif;
+  color: rgb(97, 97, 107);
+  font-size: clamp(2em, 5vw, 4em);
+  letter-spacing: 3px;
+}
+.blockHtml .container-main .description .description-header .description__sub-title {
+  display: flex;
+  width: 300px;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #5852F2;
+  font-size: clamp(0.5em, 1vw, 1em);
+  padding: 0px 30px;
+}
+.blockHtml .container-main .description .contoller__info {
+  background-color: #5852F2;
+  padding: 30px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 30px;
+}
+@media (min-width: 200px) and (max-width: 675px) {
+  .blockHtml .container-main .description .contoller__info {
+    padding: 10px;
+    display: flex;
+    order: 1;
+  }
+}
+.blockHtml .container-main .description .contoller__info .controller__title {
+  font-family: "Notable", sans-serif;
+  color: #1e1e1f;
+  font-size: clamp(1em, 2vw, 3em);
+  letter-spacing: 10px;
+}
+.blockHtml .container-main .description .contoller__info .controller__text {
+  font-family: "Lexend Zetta", sans-serif;
+  color: #f1f1f1;
+  font-size: clamp(0.5em, 1vw, 1em);
+  animation: tracking-in-contract ease-in-out 1s;
+}
+.blockHtml .container-main .description .contoller__info .controller__text .controller-text-strong {
+  font-size: 2em;
+}
+.blockHtml .container-main .description .contoller__info .controller__container-reference {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(10px, 1vw, 10px);
+  flex-wrap: wrap;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #f1f1f1;
+  font-size: clamp(0.5em, 1vw, 1em);
+}
+.blockHtml .container-main .description .contoller__info .controller__container-reference .controller__reference-li {
+  padding: 5px;
+  border: solid rgb(39, 35, 75) 1px;
+}
+.blockHtml .container-main .carousel {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.blockHtml .container-main .carousel .carousel__content {
   display: flex;
   gap: 30px;
   transform: translateX(0);
-  animation: scrollInfinite 40s linear infinite;
+  animation: scrollInfinite 100s linear infinite;
 }
-.carousel .carousel__content .carousel__img-tampografia, .carousel .carousel__content .carousel__img-serigrafia {
+.blockHtml .container-main .carousel .carousel__content .carousel__img-tampografia, .blockHtml .container-main .carousel .carousel__content .carousel__img-serigrafia {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 300px;
-  border-radius: 30px;
+  height: 400px;
 }
-
-.controller {
+.blockHtml .controller {
   display: grid;
   grid-template: 1fr 1fr auto/1fr 1fr;
   gap: 30px;
-  width: 90%;
+  width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 30px 30px 30px 0;
 }
 @media (min-width: 600px) and (max-width: 970px) {
-  .controller {
+  .blockHtml .controller {
     grid-area: 2/2/3/4;
   }
 }
 @media (min-width: 200px) and (max-width: 675px) {
-  .controller {
+  .blockHtml .controller {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,28 +292,24 @@ input {
     padding: 0 0 0 0;
   }
 }
-.controller .controller__container-btn {
-  grid-area: 1/2/4/2;
+.blockHtml .controller .controller__container-btn {
+  grid-area: 2/2/4/4;
   display: grid;
-  grid-template: 1fr auto/1fr 1fr;
+  grid-template: 1fr/1fr 1fr;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 20px;
-  padding: 30px;
-  height: 100%;
-  width: 100%;
-  border-radius: 30px;
-  background-color: #e5e5e5;
+  gap: 30px;
 }
 @media (min-width: 200px) and (max-width: 675px) {
-  .controller .controller__container-btn {
+  .blockHtml .controller .controller__container-btn {
     padding: 10px;
     display: flex;
     order: 2;
   }
 }
-.controller .controller__container-btn .controller__container-cores, .controller .controller__container-btn .controller__container-gravacao {
+.blockHtml .controller .controller__container-btn .controller__container-cores, .blockHtml .controller .controller__container-btn .controller__container-gravacao {
+  border: solid #F0F0F2;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -254,14 +317,12 @@ input {
   align-items: center;
   gap: 10px;
   padding: 10px;
-  width: 100%;
-  height: 300px;
-  border: solid 2px #23468C;
-  border-radius: 30px;
   align-self: center;
   justify-self: center;
+  width: 100%;
+  height: 100%;
 }
-.controller .controller__container-btn .controller__container-cores .controller__arrows, .controller .controller__container-btn .controller__container-gravacao .controller__arrows {
+.blockHtml .controller .controller__container-btn .controller__container-cores .controller__arrows, .blockHtml .controller .controller__container-btn .controller__container-gravacao .controller__arrows {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -270,89 +331,41 @@ input {
   width: 100%;
   height: 50%;
   cursor: pointer;
-  color: #23468C;
+  color: white;
   transition: 0.3s;
 }
-.controller .controller__container-btn .controller__container-cores .controller__arrows:hover, .controller .controller__container-btn .controller__container-gravacao .controller__arrows:hover {
-  color: #F2A516;
+.blockHtml .controller .controller__container-btn .controller__container-cores .controller__arrows:hover, .blockHtml .controller .controller__container-btn .controller__container-gravacao .controller__arrows:hover {
+  color: #F2B441;
 }
-.controller .controller__container-btn .controller__container-cores .controller__arow-down, .controller .controller__container-btn .controller__container-gravacao .controller__arow-down {
+.blockHtml .controller .controller__container-btn .controller__container-cores .controller__arow-down, .blockHtml .controller .controller__container-btn .controller__container-gravacao .controller__arow-down {
   align-items: end;
   bottom: 0;
 }
-.controller .controller__container-btn .controller__container-cores .controller__arow-up, .controller .controller__container-btn .controller__container-gravacao .controller__arow-up {
+.blockHtml .controller .controller__container-btn .controller__container-cores .controller__arow-up, .blockHtml .controller .controller__container-btn .controller__container-gravacao .controller__arow-up {
   align-items: start;
   top: 0;
 }
-.controller .controller__container-btn .controller__container-cores .controller__btn, .controller .controller__container-btn .controller__container-gravacao .controller__btn {
+.blockHtml .controller .controller__container-btn .controller__container-cores .controller__btn, .blockHtml .controller .controller__container-btn .controller__container-gravacao .controller__btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  font-family: "museo", serif;
-  color: #23468C;
-  font-size: clamp(5em, 6vw, 7em);
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
+  font-size: clamp(2em, 6vw, 7em);
 }
-.controller .controller__container-btn .controller__container-cores .controller__text, .controller .controller__container-btn .controller__container-gravacao .controller__text {
-  font-family: "museo", serif;
-  color: #23468C;
-  font-size: clamp(1em, 2vw, 2em);
+.blockHtml .controller .controller__container-btn .controller__container-cores .controller__text, .blockHtml .controller .controller__container-btn .controller__container-gravacao .controller__text {
+  font-family: "Lexend Zetta", sans-serif;
+  color: white;
+  font-size: clamp(0.7em, 1vw, 1em);
 }
-.controller .controller__container-btn .controller__container-cores {
+.blockHtml .controller .controller__container-btn .controller__container-cores {
   grid-area: 1/1/2/2;
 }
-.controller .controller__container-btn .controller__container-gravacao {
+.blockHtml .controller .controller__container-btn .controller__container-gravacao {
   grid-area: 1/2/2/3;
 }
-.controller .contoller__info {
-  grid-area: 1/1/2/2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  gap: 30px;
-  font-family: "museo", serif;
-  color: #2d5588;
-  font-size: clamp(1rem, 2vw, 3rem);
-  background-color: white;
-  border-radius: 30px;
-}
-@media (min-width: 200px) and (max-width: 675px) {
-  .controller .contoller__info {
-    padding: 10px;
-    display: flex;
-    order: 1;
-  }
-}
-.controller .contoller__info .controller__title {
-  font-family: "museo", serif;
-  color: #2d5588;
-  font-size: clamp(1rem, 2vw, 3rem);
-  animation: tracking-in-contract ease-in-out 1s;
-}
-.controller .contoller__info .controller__text {
-  font-family: "museo", serif;
-  color: #2d5588;
-  font-size: clamp(1rem, 1vw, 1rem);
-  animation: tracking-in-contract ease-in-out 1s;
-}
-.controller .contoller__info .controller__container-reference {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(10px, 1vw, 30px);
-  flex-wrap: wrap;
-  font-family: "museo", serif;
-  color: #2d5588;
-  font-size: clamp(0.7rem, 1vw, 1.5rem);
-}
-.controller .contoller__info .controller__container-reference .controller__reference-li {
-  padding: 10px;
-  border: solid #e5e5e5;
-  border-radius: 10px;
-}
-.controller .controller__container-price {
+.blockHtml .controller .controller__container-price {
   grid-area: 2/1/3/2;
   display: flex;
   justify-content: center;
@@ -360,11 +373,11 @@ input {
   gap: 10px;
 }
 @media (min-width: 200px) and (max-width: 675px) {
-  .controller .controller__container-price {
+  .blockHtml .controller .controller__container-price {
     order: 3;
   }
 }
-.controller .controller__container-price .controller__price-value {
+.blockHtml .controller .controller__container-price .controller__price-value {
   display: flex;
   flex-grow: 1;
   justify-content: center;
@@ -372,19 +385,18 @@ input {
   padding: 10px;
   gap: 10px;
   max-width: 100%;
-  border-radius: 10px;
-  background-color: #23468C;
+  border: solid white;
   opacity: 0;
-  font-family: "museo", serif;
+  font-family: "Lexend Zetta", sans-serif;
   color: white;
   font-size: clamp(0.7em, 1vw, 1.2em);
   animation: colorBtnIncrement ease-in 0.3s forwards;
   transition: 0.3s;
 }
-.controller .controller__container-price .controller__price-value strong {
+.blockHtml .controller .controller__container-price .controller__price-value strong {
   font-weight: 600;
 }
-.controller .controller__action {
+.blockHtml .controller .controller__action {
   grid-area: 3/1/4/2;
   display: flex;
   justify-content: center;
@@ -392,19 +404,18 @@ input {
   padding: 30px;
   width: 100%;
   height: 100%;
-  border-radius: 30px;
-  border: #23468C 3px solid;
+  background-color: #91E9F2;
   transition: 0.3s;
-  font-family: "museo", serif;
-  color: #23468C;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #5852F2;
   font-size: clamp(1em, 2vw, 2em);
 }
-.controller .controller__action:hover {
-  color: #e5e5e5;
-  background-color: #23468C;
+.blockHtml .controller .controller__action:hover {
+  color: #F0F0F2;
+  background-color: #F2B441;
 }
 @media (min-width: 200px) and (max-width: 675px) {
-  .controller .controller__action {
+  .blockHtml .controller .controller__action {
     order: 4;
   }
 }
@@ -427,15 +438,15 @@ input {
   width: 90%;
 }
 .laser .laser__header .laser__title {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(2em, 4vw, 3em);
   opacity: 0;
   animation: fade-in-bottom ease-in-out 0.5s forwards;
 }
 .laser .laser__header .laser__text {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(1em, 2vw, 1.5em);
   opacity: 0;
   animation: fade-in-bottom ease-in-out 1s forwards;
@@ -456,15 +467,9 @@ input {
 .laser .laser__content .laser__container-reference {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  padding: 30px;
   gap: 30px;
-  font-family: "museo", serif;
-  color: #2d5588;
-  font-size: clamp(1rem, 2vw, 3rem);
-  background-color: white;
-  border-radius: 30px;
 }
 @media (min-width: 600px) and (max-width: 970px) {
   .laser .laser__content .laser__container-reference {
@@ -479,26 +484,24 @@ input {
 .laser .laser__content .laser__container-reference .laser__container-list {
   grid-area: 1/1/2/2;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: clamp(10px, 1vw, 30px);
+  gap: clamp(10px, 1vw, 10px);
   flex-wrap: wrap;
-  font-family: "museo", serif;
-  color: #2d5588;
-  font-size: clamp(0.7rem, 1vw, 1.5rem);
+  font-family: "Lexend Zetta", sans-serif;
+  color: #f1f1f1;
+  font-size: clamp(0.5em, 1vw, 1em);
 }
 .laser .laser__content .laser__container-reference .laser__container-list .laser__item-reference {
   text-align: center;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: solid #e5e5e5 1px;
-  flex-grow: 1;
-  font-size: clamp(0.5rem, 1vw, 1.5rem);
+  padding: 10px 10px;
+  border: solid #f1f1f1 1px;
+  font-size: clamp(0.5rem, 1vw, 1em);
 }
 .laser .laser__content .laser__container-price {
   grid-area: 2/1/3/3;
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(1em, 2vw, 3em);
   display: flex;
   justify-content: center;
@@ -523,10 +526,9 @@ input {
   padding: 10px;
   gap: 10px;
   max-width: 100%;
-  border-radius: 10px;
-  background-color: #23468C;
+  border: solid white;
   opacity: 0;
-  font-family: "museo", serif;
+  font-family: "Lexend Zetta", sans-serif;
   color: white;
   font-size: clamp(0.7em, 1vw, 1.2em);
   animation: colorBtnIncrement ease-in 0.3s forwards;
@@ -555,16 +557,15 @@ input {
   padding: 30px;
   width: 100%;
   height: 100%;
-  border-radius: 30px;
-  border: #23468C 3px solid;
+  background-color: #91E9F2;
   transition: 0.3s;
-  font-family: "museo", serif;
-  color: #23468C;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #5852F2;
   font-size: clamp(1em, 2vw, 2em);
 }
 .laser .laser__content .laser__container-btn-action .laser__btn-action:hover {
-  color: #e5e5e5;
-  background-color: #23468C;
+  color: #F0F0F2;
+  background-color: #F2B441;
 }
 .laser .laser__content .laser__container-img {
   grid-area: 1/2/2/3;
@@ -595,7 +596,7 @@ input {
   gap: 30px;
   padding: 30px;
   border-radius: 30px;
-  border: solid #23468C;
+  border: solid #5852F2;
 }
 @media (min-width: 600px) and (max-width: 970px) {
   .laser .laser__content .laser__container-controlls {
@@ -608,8 +609,8 @@ input {
   }
 }
 .laser .laser__content .laser__container-controlls .laser__controlls-title {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(1rem, 2vw, 3rem);
   text-align: center;
   opacity: 0;
@@ -632,25 +633,25 @@ input {
   width: 100%;
 }
 .laser .laser__content .laser__container-controlls .laser__container-measure-controlls .laser__measure-controll .laser__btn-measure-controll {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(1em, 2vw, 3em);
   width: 100%;
   height: 100%;
   padding: 10px;
   cursor: pointer;
   border-radius: 10px;
-  background-color: #F2A516;
+  background-color: #F2B441;
   transition: 0.3s;
 }
 .laser .laser__content .laser__container-controlls .laser__container-measure-controlls .laser__measure-controll .laser__btn-measure-controll:hover {
   background-color: #F28B0C;
 }
 .laser .laser__content .laser__container-controlls .laser__container-measure-controlls .laser__measure-controll .laser__btn-measure-controll--active {
-  background-color: #23468C;
+  background-color: #5852F2;
 }
 .laser .laser__content .laser__container-controlls .laser__container-measure-controlls .laser__measure-controll .laser__btn-measure-controll--active:hover {
-  background-color: #23468C;
+  background-color: #5852F2;
 }
 
 .others {
@@ -662,15 +663,15 @@ input {
   width: 100%;
 }
 .others .others__title {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(2em, 4vw, 3em);
   width: 90%;
   text-align: center;
 }
 .others .others__text {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(1em, 2vw, 1.5em);
   width: 90%;
   overflow-wrap: break-word;
@@ -690,7 +691,7 @@ input {
   padding: 30px;
   gap: 10px;
   width: 400px;
-  background-color: #e5e5e5;
+  background-color: #F0F0F2;
   border-radius: 30px;
 }
 .others .others__container-cards .others__card-content .other__img {
@@ -698,16 +699,16 @@ input {
   border-radius: 30px;
 }
 .others .others__container-cards .others__card-content .others__card-title {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(1em, 2vw, 2em);
-  border-bottom: solid #2d5588 1px;
+  border-bottom: solid #91E9F2 1px;
   padding: 5px;
   font-weight: 800;
 }
 .others .others__container-cards .others__card-content .others__text-card {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(1em, 2vw, 1.5em);
   overflow-wrap: break-word;
 }
@@ -715,10 +716,10 @@ input {
   display: flex;
   padding: 10px;
   border-radius: 10px;
-  font-family: "museo", serif;
+  font-family: "Lexend Zetta", sans-serif;
   color: white;
   font-size: clamp(1em, 2vw, 1.5em);
-  background-color: #2d5588;
+  background-color: #91E9F2;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -747,11 +748,11 @@ input {
   display: flex;
   align-items: center;
   font-size: clamp(1em, 0.5vw, 1em);
-  color: #2d5588;
+  color: #91E9F2;
 }
 .footer .footer__contact .footer__title {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(2em, 4vw, 3em);
   text-align: center;
 }
@@ -762,8 +763,8 @@ input {
   gap: 10px;
 }
 .footer .footer__contact .footer__container-email .footer__email {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(1em, 2vw, 1.5em);
 }
 .footer .footer__contact .footer__container-phone {
@@ -773,8 +774,8 @@ input {
   gap: 10px;
 }
 .footer .footer__contact .footer__container-phone .footer__phone {
-  font-family: "museo", serif;
-  color: #2d5588;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #91E9F2;
   font-size: clamp(1em, 2vw, 1.5em);
 }
 .footer .footer__contact .footer__container-phone span {
@@ -787,9 +788,9 @@ input {
   justify-content: center;
   padding: 10px;
   width: 100%;
-  border-top: solid #e5e5e5;
-  font-family: "museo", serif;
-  color: #e5e5e5;
+  border-top: solid #F0F0F2;
+  font-family: "Lexend Zetta", sans-serif;
+  color: #F0F0F2;
   font-size: clamp(0.7em, 0.7vw, 1em);
 }
 .footer .footer__ass strong {
@@ -799,7 +800,6 @@ input {
 body {
   display: flex;
   flex-direction: column;
-  gap: 30px;
   width: 100%;
   background-color: #f1f1f1;
 }
@@ -807,12 +807,4 @@ body .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-body .content .blockHtml {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  width: 100%;
 }/*# sourceMappingURL=style.css.map */
