@@ -3,7 +3,6 @@ export class CreateCardCarousel {
         this.indexImg = indexImg,
         this.extension = extension,
         this.container = container
-        //this.alt = usar metodo de atribuição de valores para determinar esse atributo
     }
 
     createCardCarousel() {

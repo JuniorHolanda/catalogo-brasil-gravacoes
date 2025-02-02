@@ -15,7 +15,6 @@ export class CreateLaserHtml {
                             <li class="laser__item-reference">Lapiseiras </li>
                             <li class="laser__item-reference">Porta Cartão</li>
                             <li class="laser__item-reference">Pen Drives </li>
-                            <li class="laser__item-reference">Canetas</li>
                             <li class="laser__item-reference">Estojos </li>
                             <li class="laser__item-reference">Chaveiros</li>
                             <li class="laser__item-reference">Abridor </li>
